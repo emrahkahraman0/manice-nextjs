@@ -2,6 +2,7 @@ import "@/styles/fontawesome/css/all.min.css";
 import "@/styles/grid.css";
 import "@/styles/style.css";
 import Footer from "@/components/Footer";
+import İnform from "@/components/İnform";
 import Header from "@/components/Header";
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <main>{children}</main>
+        <İnform />
         <Footer />
       </body>
     </html>

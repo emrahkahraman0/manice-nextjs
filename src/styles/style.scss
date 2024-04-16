@@ -217,29 +217,10 @@ body {
 #footer {
   width: 100%;
   padding: 15px 0;
-  background-color: $base_color;
+  background-color: $primary_color;
+  color: $base_color;
 
   //footer
   .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &_right {
-      font-family: $one_family;
-      font-size: $regular_size;
-      line-height: normal;
-    }
-
-    //Notebook
-    @include notebook {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      //&_left
-      &_left {
-        margin-bottom: 10px;
-      }
-    }
   }
 }
