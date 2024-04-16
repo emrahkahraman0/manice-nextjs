@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import HeaderLogo from "/public/headerLogo.svg";
 import Link from "next/link";
+import SearchBar from "@/templates/SearchBar";
 
 function Header() {
   //Menü
@@ -41,11 +42,11 @@ function Header() {
         <div className="container">
           <div className="header">
             <div className="header_logo">
-              <Link href="/">
+              <Link href="/" className="inline">
                 <Image
                   className="img_fluid"
                   src={HeaderLogo}
-                  alt="Team Image"
+                  alt="Header Logo"
                 />
               </Link>
             </div>
@@ -59,30 +60,80 @@ function Header() {
               </li>
               <li>
                 <Link
-                  className={currentRoute === "/teams" ? "active" : ""}
-                  href="/teams"
+                  className={currentRoute === "/about" ? "active" : ""}
+                  href="/about"
                 >
-                  Teams
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link className={currentRoute === "#" ? "active" : ""} href="#">
+                  Pages
+                </Link>
+                <ul className="dropdown">
+                  <li>
+                    <Link
+                      className={currentRoute === "/teams" ? "active" : ""}
+                      href="/teams"
+                    >
+                      Teams
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className={currentRoute === "/faqs" ? "active" : ""}
+                      href="/faqs"
+                    >
+                      Faqs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className={currentRoute === "/pricings" ? "active" : ""}
+                      href="/pricings"
+                    >
+                      Pricings
+                    </Link>
+                  </li>
+                </ul>
+                {/*dropdown*/}
+              </li>
+              <li>
+                <Link
+                  className={currentRoute === "/services" ? "active" : ""}
+                  href="/services"
+                >
+                  Services
                 </Link>
               </li>
               <li>
                 <Link
-                  className={currentRoute === "/users" ? "active" : ""}
-                  href="/users"
+                  className={currentRoute === "/projects" ? "active" : ""}
+                  href="/projects"
                 >
-                  Users
+                  Projects
                 </Link>
               </li>
               <li>
                 <Link
-                  className={currentRoute === "/posts" ? "active" : ""}
-                  href="/posts"
+                  className={currentRoute === "/blog" ? "active" : ""}
+                  href="/blog"
                 >
-                  Posts
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={currentRoute === "/contact" ? "active" : ""}
+                  href="/contact"
+                >
+                  Contact
                 </Link>
               </li>
             </ul>
             {/*header_menu*/}
+
+            <SearchBar />
 
             <div
               className={`header_hamburger ${isOpen ? "open" : ""}`}

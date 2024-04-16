@@ -28,8 +28,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    position: relative;
+    height: 100px;
 
     //&_logo
     &_logo {
@@ -52,9 +51,9 @@ body {
         > a {
           font-family: $two_family;
           color: $primary_color;
-          @include weight(medium);
-          font-size: $regular_size;
-          text-transform: uppercase;
+          @include weight(regular);
+          font-size: $xlarge_size;
+          text-transform: capitalize;
           position: relative;
           &::before {
             position: absolute;
@@ -75,8 +74,84 @@ body {
             }
           }
           &:not(:only-child):after {
-            padding-left: 0;
-            content: "▾";
+            padding-left: 5px;
+            content: "\2b";
+            font-family: "Font Awesome 6 Free";
+            font-weight: bold;
+            font-size: $large_size;
+          }
+        }
+        //dropdown
+        .dropdown {
+          width: 200px;
+          position: absolute;
+          top: 26px;
+          left: 0;
+          z-index: 2;
+          padding: 15px 0 15px 10px;
+          background-color: $three_color;
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.4ms all ease-in-out;
+          li {
+            display: block;
+            padding-bottom: 15px;
+            &:last-child {
+              padding-bottom: 0;
+            }
+            a {
+              font-family: $two_family;
+              color: $base_color;
+              @include weight(regular);
+              font-size: $regular_size;
+              text-transform: uppercase;
+              position: relative;
+              &::before {
+                position: absolute;
+                width: 0;
+                margin: -3px 0;
+                transition: 0.4ms all ease-in-out;
+                content: "";
+                background-color: $two_color;
+                height: 3px;
+                border-radius: 2px;
+                left: 0;
+                bottom: 0;
+              }
+              &:hover {
+                color: $two_color;
+                &::before {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          .active {
+            position: relative;
+            &::before {
+              position: absolute;
+              width: 0;
+              margin: -5px 0;
+              transition: 0.4ms all ease-in-out;
+              content: "";
+              background-color: $two_color;
+              height: 4px;
+              border-radius: 2px;
+              left: 0;
+              bottom: 0;
+            }
+          }
+          .active,
+          a.active {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+        &:hover {
+          .dropdown {
+            opacity: 1;
+            visibility: visible;
           }
         }
         .active {
@@ -103,11 +178,90 @@ body {
       }
     }
 
+    //&_search
+    &_search {
+      //open
+      &_open {
+        background-color: transparent;
+        i {
+          font-size: $xlarge_size;
+          cursor: pointer;
+        }
+      }
+      //input
+      &_input {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+        height: 70%;
+        padding: 40px;
+        background-color: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &_close {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 50px;
+          height: 50px;
+          color: $base_color;
+          background-color: $two_color;
+          i {
+            font-size: $xlarge_size;
+            cursor: pointer;
+          }
+        }
+        input {
+          width: 100%;
+          height: 50px;
+          background-color: transparent;
+          padding: 15px;
+          border: 5px solid $two_color;
+        }
+        .submit {
+          margin-top: 20px;
+          background-color: $two_color;
+          width: 100%;
+          height: 40px;
+          color: $base_color;
+          font-family: $three_family;
+          font-size: $xlarge_size;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+      //X_Tablet
+      @include x_tablet {
+        //open
+        &_open {
+          position: absolute;
+          top: 6%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      //Mobil
+      @include mobil {
+        //open
+        &_open {
+          position: absolute;
+          top: 6%;
+          left: 80%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
     //&_hamburger
     &_hamburger {
       display: none;
       position: absolute;
-      top: 27px;
+      top: 35px;
       right: 15px;
       transition: 0.5s all ease-in-out;
       cursor: pointer;
@@ -169,10 +323,6 @@ body {
           }
         }
       }
-      //dropdown
-      .dropdown.open {
-        opacity: 1;
-      }
       &_menu.open {
         opacity: 1;
         transform: scale(1);
@@ -202,10 +352,12 @@ body {
   transition: 0.3s all ease-in-out;
   top: 0;
   z-index: 2;
-  background-color: #eee;
+  background-color: $base_color;
 
   //header
   .header {
+    height: 80px;
+
     //&_hamburger
     &_hamburger {
       top: 27px;
@@ -216,11 +368,16 @@ body {
 //Footer#
 #footer {
   width: 100%;
-  padding: 15px 0;
-  background-color: $primary_color;
-  color: $base_color;
+  padding: 100px 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/1920x500.png");
+  background-position: center;
+  background-size: cover;
 
   //footer
   .footer {
+    //&_item
+    &_item {
+    }
   }
 }
