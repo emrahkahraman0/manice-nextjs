@@ -17,8 +17,8 @@ $small_size: 12px;
 
 //Media
 
-//X-Large
-@mixin x-large() {
+//X_Large
+@mixin x_large() {
   @media only screen and (max-width: 1400px) {
     @content;
   }

@@ -17,24 +17,24 @@ function HomeCounters() {
               </p>
             </div>
             {/*home_counters_heading*/}
-            <div className="home_counters_items row row-cols-xl-4 row-cols-lg-4 row-cols-md-2 row-cols-sm-2">
+            <div className="home_counters_items row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2">
               <div className="home_counters_items_box">
-                <CountUp end={100} duration={4} />
+                <CountUp className="count" end={100} duration={4} />
                 <h5>Satisfied Customers</h5>
               </div>
               {/*home_counters_items_box*/}
               <div className="home_counters_items_box">
-                <CountUp end={100} duration={4} />
+                <CountUp className="count" end={100} duration={4} />
                 <h5>Satisfied Customers</h5>
               </div>
               {/*home_counters_items_box*/}
               <div className="home_counters_items_box">
-                <CountUp end={100} duration={4} />
+                <CountUp className="count" end={100} duration={4} />
                 <h5>Satisfied Customers</h5>
               </div>
               {/*home_counters_items_box*/}
               <div className="home_counters_items_box">
-                <CountUp end={100} duration={4} />
+                <CountUp className="count" end={100} duration={4} />
                 <h5>Satisfied Customers</h5>
               </div>
               {/*home_counters_items_box*/}
