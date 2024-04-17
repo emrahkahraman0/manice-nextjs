@@ -1,9 +1,10 @@
-import React from "react";
+import VideoModal from "./VideoModal";
 
 function HomeShorcut() {
   return (
     <>
       <div>HomeShorcut</div>
+      <VideoModal />
     </>
   );
 }

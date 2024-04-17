@@ -378,6 +378,189 @@ body {
   }
 }
 
+//Home_Slider#
+#home_slider {
+  width: 100%;
+
+  //home_slider
+  .home_slider {
+    //&_item
+    &_item {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      //slider_caption
+      .slider_caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $base_color;
+        h6 {
+          max-width: 675px;
+          font-family: $one_family;
+          font-weight: 900;
+          letter-spacing: -2.4px;
+          font-size: 80px;
+        }
+        p {
+          padding-top: 25px;
+          max-width: 550px;
+          font-family: $three_family;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 28px;
+        }
+        //btn
+        .btn {
+          margin-top: 50px;
+          a {
+            display: inline-block;
+            font-family: $three_family;
+            font-size: $large_size;
+            font-weight: 400;
+            padding: 17px 24px;
+            background-color: $primary_color;
+            color: $base_color;
+            transition: 0.3s all ease-in-out;
+            margin-right: 15px;
+            &:last-child {
+              margin-right: 0;
+            }
+            &:focus,
+            &:hover {
+              background-color: $two_color;
+            }
+          }
+        }
+      }
+      //Large
+      @include large {
+        //slider_caption
+        .slider_caption {
+          h6 {
+            font-size: 60px;
+          }
+          p {
+            font-size: 22px;
+            line-height: 26px;
+          }
+          .btn {
+            margin-top: 40px;
+          }
+        }
+      }
+      //Notebook
+      @include notebook {
+        img {
+          height: 100vh;
+          object-fit: cover;
+        }
+        //slider_caption
+        .slider_caption {
+          max-width: 100%;
+          text-align: center;
+          h6 {
+            max-width: 100%;
+            font-size: 40px;
+          }
+          p {
+            max-width: 100%;
+            font-size: $xlarge_size;
+            line-height: 22px;
+          }
+          .btn {
+            a {
+              width: 100%;
+              margin: 0 0 10px 0;
+            }
+          }
+        }
+      }
+      //Tablet
+      @include tablet {
+        //slider_caption
+        .slider_caption {
+          h6 {
+            font-size: 30px;
+          }
+          p {
+            padding-top: 20px;
+            font-size: $large_size;
+            line-height: 20px;
+          }
+          .btn {
+            margin-top: 35px;
+            a {
+              padding: 15px 0;
+              font-size: $regular_size;
+            }
+          }
+        }
+      }
+      //X_Tablet
+      @include x_tablet {
+        //slider_caption
+        .slider_caption {
+          h6 {
+            font-size: 25px;
+            line-height: 28px;
+          }
+          p {
+            padding-top: 20px;
+            font-size: $regular_size;
+            line-height: 18px;
+          }
+          .btn {
+            margin-top: 30px;
+            a {
+              padding: 12px 0;
+              margin: 0 0 8px 0;
+            }
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        //slider_caption
+        .slider_caption {
+          h6 {
+            font-size: 20px;
+            line-height: 23px;
+          }
+          p {
+            padding-top: 18px;
+            font-size: $small_size;
+            line-height: 15px;
+          }
+          .btn {
+            margin-top: 25px;
+            a {
+              padding: 10px 0;
+              margin: 0 0 6px 0;
+              font-size: $small_size;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Home_Counters#
+#home_counters {
+  width: 100%;
+  background-color: #eee;
+  padding: 90px 0;
+}
+
 //Home_Services#
 #home_services {
   width: 100%;
