@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { FaPlay, FaTimes } from "react-icons/fa";
 
 function VideoModal({ videoUrl }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,22 +23,19 @@ function VideoModal({ videoUrl }) {
     <>
       <div>
         <span className="open" onClick={openModal}>
-          <FaPlay />
+          <i className="fa-solid fa-play"></i>
         </span>
 
         {isOpen && (
           <div className="modal">
             <div ref={modalRef} className="modal_content">
               <span className="close" onClick={closeModal}>
-                <FaTimes />
+                <i className="fa-solid fa-xmark"></i>
               </span>
               <iframe
                 width="100%"
                 height="500"
-                src={videoUrl}
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                src="https://www.youtube.com/embed/5oIGTALROZU"
               ></iframe>
             </div>
           </div>
@@ -52,6 +48,8 @@ function VideoModal({ videoUrl }) {
 export default VideoModal;
 
 <div className="home_shortcut_right">
-	<VideoModal videoUrl="https://www.youtube.com/embed/VIDEO_ID" />
-</div>
-{/*home_shortcut_right#*/}
+  <VideoModal videoUrl="https://www.youtube.com/embed/VIDEO_ID" />
+</div>;
+{
+  /*home_shortcut_right#*/
+}

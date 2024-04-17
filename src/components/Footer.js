@@ -91,7 +91,7 @@ function Footer() {
                     <i className="fa-solid fa-location-dot"></i>
                   </div>
                   <div className="text">
-                    <p>99 S.t Jomblo Park Pekanbaru 28292. Indonesia</p>
+                    <h5>99 S.t Jomblo Park Pekanbaru 28292. Indonesia</h5>
                   </div>
                 </div>
                 {/*desc_item*/}
@@ -120,7 +120,7 @@ function Footer() {
                     <i className="fa-solid fa-clock"></i>
                   </div>
                   <div className="text">
-                    <p>Mon - Sat 09:00 - 17:00</p>
+                    <h5>Mon - Sat 09:00 - 17:00</h5>
                   </div>
                 </div>
                 {/*desc_item*/}
@@ -134,6 +134,12 @@ function Footer() {
         {/*container*/}
       </div>
       {/*footer#*/}
+
+      <div id="copyright">
+        <div className="container text">
+          © 2020 Manice Figma Template. All rights reserved
+        </div>
+      </div>
     </>
   );
 }
