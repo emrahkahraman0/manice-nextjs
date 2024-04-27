@@ -1,9 +1,58 @@
-import React from "react";
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/autoplay";
+import Image from "next/image";
+import Brand1 from "/public/brand-1.svg";
+import Brand2 from "/public/brand-2.svg";
+import Brand3 from "/public/brand-3.svg";
+import Brand4 from "/public/brand-4.svg";
 
 function HomeBrands() {
   return (
     <>
-      <div>HomeBrands</div>
+      <div id="home_brands">
+        <div className="container">
+          <Swiper
+            className="home_brands"
+            modules={[Autoplay]}
+            spaceBetween={0}
+            slidesPerView={4}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              pauseOnMouseEnter: true,
+              disableOnInteraction: false,
+            }}
+          >
+            <SwiperSlide className="home_brands_item">
+              <Image className="img_fluid" src={Brand1} alt="Brands Image" />
+            </SwiperSlide>
+            {/*home_brands_item*/}
+            <SwiperSlide className="home_brands_item">
+              <Image className="img_fluid" src={Brand2} alt="Brands Image" />
+            </SwiperSlide>
+            {/*home_brands_item*/}
+            <SwiperSlide className="home_brands_item">
+              <Image className="img_fluid" src={Brand3} alt="Brands Image" />
+            </SwiperSlide>
+            {/*home_brands_item*/}
+            <SwiperSlide className="home_brands_item">
+              <Image className="img_fluid" src={Brand4} alt="Brands Image" />
+            </SwiperSlide>
+            {/*home_brands_item*/}
+            <SwiperSlide className="home_brands_item">
+              <Image className="img_fluid" src={Brand2} alt="Brands Image" />
+            </SwiperSlide>
+            {/*home_brands_item*/}
+          </Swiper>
+          {/*home_brands*/}
+        </div>
+        {/*container*/}
+      </div>
+      {/*home_brands#*/}
     </>
   );
 }
