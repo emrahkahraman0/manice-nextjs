@@ -31,6 +31,96 @@ function Servicesİtems() {
                 </div>
               </div>
               {/*services_items_boxs_item*/}
+              <div className="services_items_boxs_item">
+                <div className="icon">
+                  <i className="fa-solid fa-chart-line"></i>
+                </div>
+                <div className="text">
+                  <h6>
+                    <Link href="/">Financial Analysis</Link>
+                  </h6>
+                  <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    essecillum dolore eu fugiat nulla pariatur.
+                  </p>
+                  <Link className="read_more" href="/">
+                    Read More
+                  </Link>
+                </div>
+              </div>
+              {/*services_items_boxs_item*/}
+              <div className="services_items_boxs_item">
+                <div className="icon">
+                  <i className="fa-solid fa-chart-line"></i>
+                </div>
+                <div className="text">
+                  <h6>
+                    <Link href="/">Financial Analysis</Link>
+                  </h6>
+                  <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    essecillum dolore eu fugiat nulla pariatur.
+                  </p>
+                  <Link className="read_more" href="/">
+                    Read More
+                  </Link>
+                </div>
+              </div>
+              {/*services_items_boxs_item*/}
+              <div className="services_items_boxs_item">
+                <div className="icon">
+                  <i className="fa-solid fa-chart-line"></i>
+                </div>
+                <div className="text">
+                  <h6>
+                    <Link href="/">Financial Analysis</Link>
+                  </h6>
+                  <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    essecillum dolore eu fugiat nulla pariatur.
+                  </p>
+                  <Link className="read_more" href="/">
+                    Read More
+                  </Link>
+                </div>
+              </div>
+              {/*services_items_boxs_item*/}
+              <div className="services_items_boxs_item">
+                <div className="icon">
+                  <i className="fa-solid fa-chart-line"></i>
+                </div>
+                <div className="text">
+                  <h6>
+                    <Link href="/">Financial Analysis</Link>
+                  </h6>
+                  <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    essecillum dolore eu fugiat nulla pariatur.
+                  </p>
+                  <Link className="read_more" href="/">
+                    Read More
+                  </Link>
+                </div>
+              </div>
+              {/*services_items_boxs_item*/}
+              <div className="services_items_boxs_item">
+                <div className="icon">
+                  <i className="fa-solid fa-chart-line"></i>
+                </div>
+                <div className="text">
+                  <h6>
+                    <Link href="/">Financial Analysis</Link>
+                  </h6>
+                  <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    essecillum dolore eu fugiat nulla pariatur.
+                  </p>
+                  <Link className="read_more" href="/">
+                    Read More
+                  </Link>
+                </div>
+              </div>
+              {/*services_items_boxs_item*/}
             </div>
             {/*services_items_boxs*/}
           </div>
