@@ -236,6 +236,16 @@ body {
           cursor: pointer;
         }
       }
+      //Notebook
+      @include notebook {
+        //open
+        &_open {
+          position: absolute;
+          top: 6%;
+          left: 70%;
+          transform: translate(-50%, -50%);
+        }
+      }
       //X_Tablet
       @include x_tablet {
         //open
@@ -3653,7 +3663,285 @@ body {
 
 //Services_Pricings#
 #services_pricings {
-  background-color: $five_color;
+  width: 100%;
+  padding: 100px 0 100px 0;
+  background-color: #eee;
+
+  //services_pricings
+  .services_pricings {
+    //&_heading
+    &_heading {
+      text-align: center;
+      h6 {
+        font-family: $one_family;
+        font-weight: 900;
+        line-height: normal;
+        font-size: 35px;
+        text-transform: capitalize;
+        span {
+          color: $two_color;
+        }
+      }
+      //Notebook
+      @include notebook {
+        h6 {
+          font-size: 30px;
+        }
+      }
+      //Tablet
+      @include tablet {
+        h6 {
+          font-size: 25px;
+        }
+      }
+      //X_Tablet
+      @include x_tablet {
+        h6 {
+          font-size: 20px;
+        }
+      }
+      //Mobil
+      @include mobil {
+        h6 {
+          font-size: $xlarge_size;
+        }
+      }
+    }
+
+    //&_items
+    &_items {
+      padding-top: 80px;
+      text-align: center;
+
+      //&_box
+      &_box {
+        border: 1px solid $six_color;
+        background-color: $base_color;
+        padding: 40px 0;
+        transition: 0.3s all ease-in-out;
+        &:hover {
+          background-color: $two_color;
+        }
+      }
+    }
+  }
+}
+
+//Services_Clients#
+#services_clients {
+  width: 100%;
+  padding: 90px 0;
+  background-color: $base_color;
+
+  //services_clients
+  .services_clients {
+    //&_heading
+    &_heading {
+      text-align: center;
+      h6 {
+        font-family: $one_family;
+        font-weight: 900;
+        line-height: normal;
+        font-size: 35px;
+        text-transform: capitalize;
+        span {
+          color: $two_color;
+        }
+      }
+      //Notebook
+      @include notebook {
+        h6 {
+          font-size: 30px;
+        }
+      }
+      //Tablet
+      @include tablet {
+        h6 {
+          font-size: 25px;
+        }
+      }
+      //X_Tablet
+      @include x_tablet {
+        h6 {
+          font-size: 20px;
+        }
+      }
+      //Mobil
+      @include mobil {
+        h6 {
+          font-size: $xlarge_size;
+        }
+      }
+    }
+
+    //&_boxs
+    &_boxs {
+      padding-top: 70px;
+
+      //&_item
+      &_item {
+        border: 1px solid $six_color;
+        padding: 30px 40px;
+        p {
+          font-family: $three_family;
+          color: $three_color;
+          font-style: italic;
+          font-size: 27px;
+          line-height: normal;
+          position: relative;
+          z-index: 1;
+          &::before {
+            content: '\f10e';
+            font-family: 'Font Awesome 6 Free';
+            font-size: 120px;
+            color: $seven_color;
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            z-index: -1;
+            font-weight: 900;
+          }
+        }
+        //client_desc
+        .client_desc {
+          padding-top: 25px;
+          display: flex;
+          align-items: center;
+          //&_image
+          &_image {
+            img {
+              border-radius: 50%;
+            }
+          }
+          //&_text
+          &_text {
+            padding-left: 25px;
+            h5 {
+              font-family: $one_family;
+              color: $primary_color;
+              font-weight: 900;
+              line-height: normal;
+              text-transform: capitalize;
+              font-size: 21px;
+            }
+            h6 {
+              padding-top: 10px;
+              font-family: $three_family;
+              color: $three_color;
+              font-size: $large_size;
+              line-height: normal;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+      //X_Large
+      @include x_large {
+        //&_item
+        &_item {
+          p {
+            font-size: 25px;
+          }
+        }
+      }
+      //Large
+      @include large {
+        //&_item
+        &_item {
+          padding: 20px 30px;
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+      //Notebook
+      @include notebook {
+        padding-top: 60px;
+        //&_item
+        &_item {
+          text-align: center;
+          p {
+            font-size: $xlarge_size;
+            &::before {
+              top: -20px;
+              left: -20px;
+              font-size: 90px;
+            }
+          }
+          //client_desc
+          .client_desc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &_text {
+              padding: 10px 0 0 0;
+              h5 {
+                font-size: $xlarge_size;
+              }
+              h6 {
+                padding-top: 7px;
+              }
+            }
+          }
+        }
+      }
+      //Tablet
+      @include tablet {
+        //&_item
+        &_item {
+          padding: 20px 10px;
+          p {
+            font-size: $large_size;
+            &::before {
+              top: -10px;
+              left: -10px;
+              font-size: 70px;
+            }
+          }
+          //client_desc
+          .client_desc {
+            &_text {
+              h5 {
+                font-size: $large_size;
+              }
+              h6 {
+                padding-top: 5px;
+                font-size: $regular_size;
+              }
+            }
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        //&_item
+        &_item {
+          padding: 20px 10px;
+          p {
+            font-size: $regular_size;
+            line-height: 18px;
+            &::before {
+              top: 0px;
+              left: 0px;
+              font-size: 50px;
+            }
+          }
+          //client_desc
+          .client_desc {
+            &_text {
+              h5 {
+                font-size: $regular_size;
+              }
+              h6 {
+                padding-top: 5px;
+                font-size: $small_size;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /////FAQS
