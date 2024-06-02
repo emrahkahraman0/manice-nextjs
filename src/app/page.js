@@ -1,17 +1,23 @@
-import React from "react";
+import HomeAbout from "@/templates/HomeAbout";
+import HomeBlog from "@/templates/HomeBlog";
+import HomeCounters from "@/templates/HomeCounters";
+import HomeServices from "@/templates/HomeServices";
+import HomeShorcut from "@/templates/HomeShorcut";
+import HomeSlider from "@/templates/HomeSlider";
+import HomeStatement from "@/templates/HomeStatement";
 
-function page() {
+function Home() {
   return (
     <>
-      <div>page</div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque
-        reiciendis voluptate exercitationem maxime dignissimos corrupti iste
-        nulla ipsam assumenda nam esse fugit quis nobis aperiam sapiente
-        quaerat, deserunt maiores possimus.
-      </p>
+      <HomeSlider />
+      <HomeShorcut />
+      <HomeCounters />
+      <HomeAbout />
+      <HomeServices />
+      <HomeStatement />
+      <HomeBlog />
     </>
   );
 }
 
-export default page;
+export default Home;
