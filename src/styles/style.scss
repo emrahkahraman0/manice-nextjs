@@ -1,8 +1,8 @@
 //Bu Sass Dosyası Emrah KAHRAMAN tarafından kodlanmıştır.
 
 //Variable
-@import 'variables/_reset';
-@import 'variables/_variable';
+@import "variables/_reset";
+@import "variables/_variable";
 
 * {
   box-sizing: border-box;
@@ -60,7 +60,7 @@ body {
             width: 0;
             margin: -4px 0;
             transition: 0.4ms all ease-in-out;
-            content: '';
+            content: "";
             background-color: $two_color;
             height: 4px;
             border-radius: 2px;
@@ -75,8 +75,8 @@ body {
           }
           &:not(:only-child):after {
             padding-left: 5px;
-            content: '\2b';
-            font-family: 'Font Awesome 6 Free';
+            content: "\2b";
+            font-family: "Font Awesome 6 Free";
             font-weight: bold;
             font-size: $large_size;
           }
@@ -111,7 +111,7 @@ body {
                 width: 0;
                 margin: -3px 0;
                 transition: 0.4ms all ease-in-out;
-                content: '';
+                content: "";
                 background-color: $two_color;
                 height: 3px;
                 border-radius: 2px;
@@ -133,7 +133,7 @@ body {
               width: 0;
               margin: -5px 0;
               transition: 0.4ms all ease-in-out;
-              content: '';
+              content: "";
               background-color: $two_color;
               height: 4px;
               border-radius: 2px;
@@ -161,7 +161,7 @@ body {
             width: 0;
             margin: -5px 0;
             transition: 0.4ms all ease-in-out;
-            content: '';
+            content: "";
             background-color: $two_color;
             height: 4px;
             border-radius: 2px;
@@ -399,7 +399,7 @@ body {
     &_item {
       position: relative;
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -614,7 +614,7 @@ body {
     &_video {
       width: 50%;
       height: 355px;
-      background-image: url('/570x355.png');
+      background-image: url("/570x355.png");
       background-position: center;
       background-size: cover;
       display: flex;
@@ -972,8 +972,8 @@ body {
               padding: 0 0 0 15px;
             }
             &::before {
-              content: '\f00c';
-              font-family: 'Font Awesome 6 Free';
+              content: "\f00c";
+              font-family: "Font Awesome 6 Free";
               font-weight: 900;
               color: $two_color;
               font-size: $large_size;
@@ -1330,7 +1330,7 @@ body {
       rgba(58, 181, 74, 0.7),
       rgba(58, 181, 74, 0.7)
     ),
-    url('/1920x650.png');
+    url("/1920x650.png");
   background-position: center;
   background-size: cover;
 
@@ -1414,7 +1414,7 @@ body {
     &_item {
       position: relative;
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -1840,7 +1840,7 @@ body {
   width: 100%;
   padding: 100px 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('/1920x500.png');
+    url("/1920x500.png");
   background-position: center;
   background-size: cover;
 
@@ -1903,8 +1903,8 @@ body {
               position: absolute;
               top: 0;
               left: 0;
-              content: '\f054';
-              font-family: 'Font Awesome 6 Free';
+              content: "\f054";
+              font-family: "Font Awesome 6 Free";
               font-weight: 900;
             }
             &:hover {
@@ -2100,7 +2100,7 @@ body {
       text-transform: capitalize;
       position: relative;
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -27px;
         left: 0;
@@ -2511,8 +2511,8 @@ body {
               padding: 0 0 0 15px;
             }
             &::before {
-              content: '\f00c';
-              font-family: 'Font Awesome 6 Free';
+              content: "\f00c";
+              font-family: "Font Awesome 6 Free";
               font-weight: 900;
               color: $two_color;
               font-size: $large_size;
@@ -2545,7 +2545,7 @@ body {
           rgba(0, 0, 0, 0.5),
           rgba(0, 0, 0, 0.5)
         ),
-        url('/945x725.png');
+        url("/945x725.png");
       background-position: center;
       background-size: cover;
 
@@ -3177,8 +3177,8 @@ body {
               padding: 0 0 0 15px;
             }
             &::before {
-              content: '\f00c';
-              font-family: 'Font Awesome 6 Free';
+              content: "\f00c";
+              font-family: "Font Awesome 6 Free";
               font-weight: 900;
               color: $two_color;
               font-size: $large_size;
@@ -3391,8 +3391,8 @@ body {
             padding: 0 0 0 22px;
           }
           &::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 6 Free';
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
             font-weight: 900;
             color: $two_color;
             font-size: $large_size;
@@ -3666,6 +3666,10 @@ body {
   width: 100%;
   padding: 100px 0 100px 0;
   background-color: $five_color;
+  //Notebook
+  @include notebook {
+    padding: 100px 0 70px 0;
+  }
 
   //services_pricings
   .services_pricings {
@@ -3717,8 +3721,22 @@ body {
       &_box {
         border: 1px solid $six_color;
         background-color: $base_color;
-        padding: 40px 0;
+        padding: 35px;
         transition: 0.3s all ease-in-out;
+        h4 {
+          position: relative;
+          top: -60px;
+          left: 0;
+          width: 100%;
+          height: 45px;
+          line-height: 45px;
+          text-align: center;
+          background-color: $eight_color;
+          color: $primary_color;
+          font-family: $three_family;
+          text-transform: capitalize;
+          font-size: $large_size;
+        }
         h5 {
           font-family: $three_family;
           color: $three_color;
@@ -3743,11 +3761,178 @@ body {
           line-height: normal;
           color: $three_color;
         }
+        //ul
         ul {
           padding-top: 50px;
+          text-align: left;
+          li {
+            display: block;
+            position: relative;
+            padding: 0 0 20px 30px;
+            &:last-child {
+              padding: 0 0 0 30px;
+            }
+            a {
+              font-family: $three_family;
+              font-size: $large_size;
+              font-weight: 400;
+              color: $three_color;
+              transition: 0.3s all ease-in-out;
+              &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "\f058";
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                color: $two_color;
+              }
+              &:hover {
+                color: $two_color;
+              }
+            }
+          }
+        }
+        .read_more {
+          display: inline-block;
+          margin-top: 70px;
+          width: 100%;
+          height: 55px;
+          text-align: center;
+          background-color: $two_color;
+          color: $base_color;
+          font-family: $three_family;
+          text-transform: capitalize;
+          font-size: $large_size;
+          line-height: 55px;
         }
         &:hover {
           background-color: $two_color;
+          h5,
+          h6,
+          p {
+            color: $base_color;
+          }
+          ul {
+            li {
+              a {
+                color: $base_color;
+                &::before {
+                  color: $base_color;
+                }
+              }
+            }
+          }
+          .read_more {
+            background-color: $primary_color;
+          }
+        }
+      }
+
+      //Large
+      @include large {
+        //&_box
+        &_box {
+          padding: 30px;
+          h4 {
+            top: -50px;
+          }
+          h6 {
+            font-size: 30px;
+          }
+        }
+      }
+      //Notebook
+      @include notebook {
+        //&_box
+        &_box {
+          margin-bottom: 30px;
+          padding: 25px;
+          h4 {
+            top: -40px;
+            height: 35px;
+            line-height: 35px;
+            font-size: $regular_size;
+          }
+          h5 {
+            font-size: $regular_size;
+          }
+          h6 {
+            font-size: 25px;
+          }
+          p {
+            font-size: $regular_size;
+          }
+          ul {
+            li {
+              padding: 0 0 15px 25px;
+              &:last-child {
+                padding: 0 0 0 25px;
+              }
+              a {
+                font-size: $regular_size;
+                &::before {
+                  top: 1px;
+                }
+              }
+            }
+          }
+          .read_more {
+            margin-top: 50px;
+            height: 45px;
+            line-height: 45px;
+            font-size: $regular_size;
+          }
+        }
+      }
+      //XTablet
+      @include x_tablet {
+        //&_box
+        &_box {
+          padding: 20px;
+          h4 {
+            top: 0px;
+            height: 30px;
+            line-height: 30px;
+          }
+          h5 {
+            padding-top: 15px;
+          }
+          h6 {
+            font-size: 20px;
+          }
+          .read_more {
+            height: 35px;
+            line-height: 35px;
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        //&_box
+        &_box {
+          padding: 15px;
+          h4 {
+            top: 0px;
+            height: 30px;
+            line-height: 30px;
+            font-size: $small_size;
+          }
+          h5 {
+            padding-top: 15px;
+            font-size: $small_size;
+          }
+          h6 {
+            font-size: $xlarge_size;
+          }
+          p {
+            font-size: $small_size;
+          }
+          .read_more {
+            height: 30px;
+            line-height: 30px;
+            font-size: $small_size;
+          }
         }
       }
     }
@@ -3818,8 +4003,8 @@ body {
           position: relative;
           z-index: 1;
           &::before {
-            content: '\f10e';
-            font-family: 'Font Awesome 6 Free';
+            content: "\f10e";
+            font-family: "Font Awesome 6 Free";
             font-size: 120px;
             color: $seven_color;
             position: absolute;

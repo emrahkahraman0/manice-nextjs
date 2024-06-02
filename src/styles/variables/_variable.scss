@@ -1,6 +1,6 @@
 //Variable.scss
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 
 $base_color: #ffffff;
 $primary_color: #000000;
@@ -10,9 +10,10 @@ $four_color: #707070;
 $five_color: #f6fff7;
 $six_color: #c4c4c4;
 $seven_color: #e2e2e2;
-$one_family: 'Lato', sans-serif;
-$two_family: 'Poppins', sans-serif;
-$three_family: 'Roboto', sans-serif;
+$eight_color: #fff615;
+$one_family: "Lato", sans-serif;
+$two_family: "Poppins", sans-serif;
+$three_family: "Roboto", sans-serif;
 $xlarge_size: 18px;
 $large_size: 16px;
 $regular_size: 14px;
@@ -89,7 +90,7 @@ $small_size: 12px;
     black: 900,
     ultra: 900,
     ultra-black: 900,
-    extra-ultra: 900
+    extra-ultra: 900,
   );
 
   $output: $weight;

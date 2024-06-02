@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 function ServicesPricings() {
   return (
@@ -32,9 +32,9 @@ function ServicesPricings() {
                       <Link href="/">Unlimited cloud storage</Link>
                     </li>
                   </ul>
-                  <button>
-                    <Link href="/">Get Now</Link>
-                  </button>
+                  <Link className="read_more" href="/">
+                    Get Now
+                  </Link>
                 </div>
               </div>
               {/*services_pricings_items_box*/}
@@ -58,9 +58,9 @@ function ServicesPricings() {
                       <Link href="/">Unlimited cloud storage</Link>
                     </li>
                   </ul>
-                  <button>
-                    <Link href="/">Get Now</Link>
-                  </button>
+                  <Link className="read_more" href="/">
+                    Get Now
+                  </Link>
                 </div>
               </div>
               {/*services_pricings_items_box*/}
@@ -83,9 +83,9 @@ function ServicesPricings() {
                       <Link href="/">Unlimited cloud storage</Link>
                     </li>
                   </ul>
-                  <button>
-                    <Link href="/">Get Now</Link>
-                  </button>
+                  <Link className="read_more" href="/">
+                    Get Now
+                  </Link>
                 </div>
               </div>
               {/*services_pricings_items_box*/}
@@ -98,7 +98,7 @@ function ServicesPricings() {
       </div>
       {/*services_pricings#*/}
     </>
-  )
+  );
 }
 
-export default ServicesPricings
+export default ServicesPricings;
