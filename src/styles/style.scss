@@ -4158,6 +4158,136 @@ body {
 
 /////FAQS
 
+//Faqs#
+#faqs {
+  width: 100%;
+  padding: 80px 0;
+
+  //faqs
+  .faqs {
+    //&_item
+    &_item {
+      margin-bottom: 100px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      h1 {
+        font-family: $one_family;
+        color: $primary_color;
+        font-weight: 900;
+        line-height: normal;
+        font-size: 30px;
+        padding-bottom: 35px;
+
+        //Large
+        @include large {
+          font-size: 25px;
+        }
+        //Notebook
+        @include notebook {
+          text-align: center;
+          font-size: 22px;
+        }
+        //Tablet
+        @include tablet {
+          font-size: 20px;
+        }
+        //XTablet
+        @include x_tablet {
+          font-size: $xlarge_size;
+        }
+        //Mobil
+        @include mobil {
+          font-size: $large_size;
+          line-height: 20px;
+        }
+      }
+
+      //&_box
+      &_box {
+        width: 100%;
+        .heading {
+          border: 1px solid $six_color;
+          padding: 25px 45px;
+          position: relative;
+          i {
+            position: absolute;
+            top: 35px;
+            right: 35px;
+            color: $primary_color;
+            font-weight: bold;
+          }
+          .fa-chevron-up.open {
+            color: $two_color;
+          }
+          h3 {
+            font-family: $one_family;
+            font-size: 21px;
+            font-weight: 900;
+            line-height: normal;
+          }
+        }
+        .content {
+          border: 1px solid $six_color;
+          background-color: $five_color;
+          padding: 40px;
+          font-family: $three_family;
+          color: $three_color;
+          font-weight: 400;
+          font-size: $large_size;
+          line-height: 20px;
+        }
+
+        //Notebook
+        @include notebook {
+          //heading
+          .heading {
+            padding: 15px 25px;
+            i {
+              top: 20px;
+              right: 20px;
+            }
+            h3 {
+              font-size: $xlarge_size;
+            }
+          }
+          //content
+          .content {
+            font-size: $regular_size;
+            line-height: 19px;
+            padding: 30px;
+          }
+        }
+        //XTablet
+        @include x_tablet {
+          //heading
+          .heading {
+            padding: 15px 20px;
+            h3 {
+              font-size: $large_size;
+            }
+          }
+        }
+        //Mobil
+        @include mobil {
+          //heading
+          .heading {
+            h3 {
+              font-size: $regular_size;
+            }
+          }
+          //content
+          .content {
+            font-size: $small_size;
+            line-height: 17px;
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
 /////PRİCİNGS
 
 /////TEAMS
