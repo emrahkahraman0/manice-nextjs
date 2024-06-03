@@ -1,8 +1,9 @@
-import React from "react";
+import Page from "@/templates/Page";
 
 function Faqs() {
   return (
     <>
+      <Page />
       <div>Faqs</div>
     </>
   );

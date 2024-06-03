@@ -4171,3 +4171,94 @@ body {
 /////BLOG-SİNGLE
 
 /////CONTACT
+
+/////ERROR-404
+
+//Error_Page
+#error_page {
+  width: 100%;
+  padding: 120px 0;
+
+  //text
+  .text {
+    text-align: center;
+    .head {
+      position: relative;
+      top: -140px;
+      h6 {
+        font-family: $one_family;
+        font-weight: 900;
+        color: $primary_color;
+        font-size: 35px;
+        line-height: normal;
+      }
+      p {
+        padding-top: 15px;
+        font-family: $three_family;
+        color: $three_color;
+        font-size: $large_size;
+        line-height: normal;
+      }
+      .read_more {
+        margin-top: 70px;
+        display: inline-block;
+        background-color: $two_color;
+        padding: 17px 32px;
+        color: $base_color;
+        font-family: $three_family;
+        font-weight: 400;
+        font-size: $large_size;
+      }
+
+      //Large
+      @include large {
+        top: -130px;
+        h6 {
+          font-size: 30px;
+        }
+      }
+      //Noteook
+      @include notebook {
+        top: 20px;
+        h6 {
+          font-size: 25px;
+        }
+        .read_more {
+          margin-top: 40px;
+          width: 100%;
+          padding: 15px 0;
+        }
+      }
+      //XTablet
+      @include x_tablet {
+        top: 20px;
+        h6 {
+          font-size: 20px;
+        }
+        p {
+          font-size: $regular_size;
+        }
+        .read_more {
+          margin-top: 40px;
+          width: 100%;
+          padding: 10px 0;
+          font-size: $regular_size;
+        }
+      }
+      //Mobil
+      @include mobil {
+        h6 {
+          font-size: $xlarge_size;
+        }
+        p {
+          font-size: $small_size;
+          line-height: 17px;
+        }
+        .read_more {
+          margin-top: 30px;
+          font-size: $small_size;
+        }
+      }
+    }
+  }
+}
