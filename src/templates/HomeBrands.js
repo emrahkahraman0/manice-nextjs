@@ -26,6 +26,29 @@ function HomeBrands() {
               pauseOnMouseEnter: true,
               disableOnInteraction: false,
             }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              480: {
+                slidesPerView: 2,
+              },
+              575: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+              992: {
+                slidesPerView: 3,
+              },
+              1200: {
+                slidesPerView: 4,
+              },
+              1400: {
+                slidesPerView: 4,
+              },
+            }}
           >
             <SwiperSlide className="home_brands_item">
               <Image className="img_fluid" src={Brand1} alt="Brands Image" />

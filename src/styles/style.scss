@@ -1516,6 +1516,12 @@ body {
   }
 }
 
+//Home_Brands#
+#home_brands {
+  width: 100%;
+  text-align: center;
+}
+
 //Home_Blog#
 #home_blog {
   width: 100%;
@@ -4161,7 +4167,7 @@ body {
 //Faqs#
 #faqs {
   width: 100%;
-  padding: 80px 0;
+  padding: 100px 0;
 
   //faqs
   .faqs {
@@ -4210,6 +4216,7 @@ body {
           border: 1px solid $six_color;
           padding: 25px 45px;
           position: relative;
+          cursor: pointer;
           i {
             position: absolute;
             top: 35px;
@@ -4292,9 +4299,378 @@ body {
 
 /////TEAMS
 
+//Teams#
+#teams {
+  width: 100%;
+  padding: 100px 0 70px 0;
+
+  //teams
+  .teams {
+    //&_item
+    &_item {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      img {
+        width: 100%;
+      }
+      h5 {
+        padding-top: 15px;
+        font-family: $one_family;
+        font-weight: 900;
+        text-transform: capitalize;
+        font-size: $xlarge_size;
+        color: $primary_color;
+        line-height: normal;
+      }
+      h6 {
+        padding-top: 12px;
+        font-family: $three_family;
+        color: $three_color;
+        text-transform: capitalize;
+        font-size: $large_size;
+        line-height: normal;
+      }
+      .read_more {
+        display: inline-block;
+        padding-top: 25px;
+        font-family: $three_family;
+        @include weight(400);
+        font-size: $large_size;
+        line-height: normal;
+        color: $two_color;
+      }
+
+      //Tablet
+      @include tablet {
+        h5 {
+          font-size: $large_size;
+        }
+        h6 {
+          font-size: $regular_size;
+        }
+        .read_more {
+          padding-top: 20px;
+          font-size: $regular_size;
+        }
+      }
+      //Mobil
+      @include mobil {
+        h5 {
+          font-size: $regular_size;
+        }
+        h6 {
+          font-size: $small_size;
+        }
+        .read_more {
+          padding-top: 17px;
+          font-size: $small_size;
+        }
+      }
+    }
+  }
+}
+
 /////PROJECTS
 
+//Projects#
+#projects {
+  width: 100%;
+  padding: 100px 0 70px 0;
+
+  //projects
+  .projects {
+    //&_item
+    &_item {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      img {
+        width: 100%;
+      }
+      h6 {
+        padding-top: 15px;
+        a {
+          font-family: $one_family;
+          font-weight: 900;
+          text-transform: capitalize;
+          font-size: 21px;
+          color: $primary_color;
+          line-height: normal;
+        }
+      }
+      p {
+        padding-top: 15px;
+        font-family: $three_family;
+        color: $three_color;
+        font-size: $large_size;
+        line-height: 22px;
+      }
+      .read_more {
+        display: inline-block;
+        padding-top: 25px;
+        font-family: $three_family;
+        @include weight(400);
+        font-size: $large_size;
+        line-height: normal;
+        color: $two_color;
+      }
+
+      //Notebook
+      @include notebook {
+        h6 {
+          a {
+            font-size: $xlarge_size;
+          }
+        }
+      }
+      //Tablet
+      @include tablet {
+        h6 {
+          a {
+            font-size: $large_size;
+          }
+        }
+        p {
+          padding-top: 12px;
+          font-size: $regular_size;
+          line-height: 19px;
+        }
+        .read_more {
+          padding-top: 20px;
+          font-size: $regular_size;
+        }
+      }
+      //Mobil
+      @include mobil {
+        h6 {
+          a {
+            font-size: $regular_size;
+          }
+        }
+        p {
+          font-size: $small_size;
+          line-height: 16px;
+        }
+        .read_more {
+          font-size: $small_size;
+        }
+      }
+    }
+  }
+}
+
 /////PROJECTS-SİNGLE
+
+//ProjectsDetails#
+#projects_details {
+  width: 100%;
+  padding: 100px 0;
+  //projects_details
+  .projects_details {
+    //&_image
+    &_image {
+      img {
+        width: 100%;
+      }
+    }
+    //&_text
+    &_text {
+      h6 {
+        font-family: $one_family;
+        font-weight: 900;
+        text-transform: capitalize;
+        font-size: 21px;
+        color: $primary_color;
+        line-height: normal;
+      }
+      p {
+        padding-top: 20px;
+        font-family: $three_family;
+        color: $three_color;
+        font-size: $large_size;
+        line-height: 22px;
+      }
+    }
+
+    //Notebook
+    @include notebook {
+      //&_text
+      &_text {
+        padding-top: 25px;
+        h6 {
+          font-size: $xlarge_size;
+        }
+      }
+    }
+    //Tablet
+    @include tablet {
+      //&_text
+      &_text {
+        h6 {
+          font-size: $large_size;
+        }
+        p {
+          padding-top: 18px;
+          font-size: $regular_size;
+          line-height: 19px;
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_text
+      &_text {
+        h6 {
+          font-size: $regular_size;
+        }
+        p {
+          font-size: $small_size;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}
+
+//Recent_Projects#
+#recent_projects {
+  width: 100%;
+  background-color: $five_color;
+  padding: 100px 0;
+  //recent_projects
+  .recent_projects {
+    //&_heading
+    &_heading {
+      text-align: center;
+      h6 {
+        font-family: $one_family;
+        font-weight: 900;
+        line-height: normal;
+        font-size: 35px;
+        text-transform: capitalize;
+        span {
+          color: $two_color;
+        }
+      }
+      //Notebook
+      @include notebook {
+        h6 {
+          font-size: 30px;
+        }
+      }
+      //Tablet
+      @include tablet {
+        h6 {
+          font-size: 25px;
+        }
+      }
+      //X_Tablet
+      @include x_tablet {
+        h6 {
+          font-size: 20px;
+        }
+      }
+      //Mobil
+      @include mobil {
+        h6 {
+          font-size: $xlarge_size;
+        }
+      }
+    }
+
+    //&_items
+    &_items {
+      padding-top: 60px;
+      //&_box
+      &_box {
+        img {
+          width: 100%;
+        }
+        h6 {
+          padding-top: 15px;
+          a {
+            font-family: $one_family;
+            font-weight: 900;
+            text-transform: capitalize;
+            font-size: 21px;
+            color: $primary_color;
+            line-height: normal;
+          }
+        }
+        p {
+          padding-top: 15px;
+          font-family: $three_family;
+          color: $three_color;
+          font-size: $large_size;
+          line-height: 22px;
+        }
+        .read_more {
+          display: inline-block;
+          padding-top: 25px;
+          font-family: $three_family;
+          @include weight(400);
+          font-size: $large_size;
+          line-height: normal;
+          color: $two_color;
+        }
+        //Notebook
+        @include notebook {
+          h6 {
+            a {
+              font-size: $xlarge_size;
+            }
+          }
+        }
+        //Tablet
+        @include tablet {
+          h6 {
+            a {
+              font-size: $large_size;
+            }
+          }
+          p {
+            padding-top: 12px;
+            font-size: $regular_size;
+            line-height: 19px;
+          }
+          .read_more {
+            padding-top: 20px;
+            font-size: $regular_size;
+          }
+        }
+        //Mobil
+        @include mobil {
+          h6 {
+            a {
+              font-size: $regular_size;
+            }
+          }
+          p {
+            font-size: $small_size;
+            line-height: 16px;
+          }
+          .read_more {
+            font-size: $small_size;
+          }
+        }
+      }
+    }
+
+    //swiper-pagination
+    .swiper-pagination {
+      //swiper-pagination-bullet
+      .swiper-pagination-bullet {
+        width: 50px;
+        height: 50px;
+        background-color: $two_color;
+        border-radius: 50%;
+      }
+    }
+  }
+}
 
 /////BLOG
 
