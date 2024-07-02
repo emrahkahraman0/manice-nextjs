@@ -4,7 +4,7 @@ function Blog() {
   return (
     <>
       <Page />
-      <div>Blog</div>
+      <div>Blog page</div>
     </>
   );
 }

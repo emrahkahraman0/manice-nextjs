@@ -1,8 +1,8 @@
 //Bu Sass Dosyası Emrah KAHRAMAN tarafından kodlanmıştır.
 
 //Variable
-@import "variables/_reset";
-@import "variables/_variable";
+@import 'variables/_reset';
+@import 'variables/_variable';
 
 * {
   box-sizing: border-box;
@@ -34,6 +34,7 @@ body {
     &_logo {
       position: relative;
       z-index: 3;
+
       img {
         cursor: pointer;
       }
@@ -45,9 +46,11 @@ body {
         display: inline-block;
         position: relative;
         margin-right: 25px;
+
         &:last-child {
           margin-right: 0;
         }
+
         > a {
           font-family: $two_family;
           color: $primary_color;
@@ -55,32 +58,37 @@ body {
           font-size: $xlarge_size;
           text-transform: capitalize;
           position: relative;
+
           &::before {
             position: absolute;
             width: 0;
             margin: -4px 0;
             transition: 0.4ms all ease-in-out;
-            content: "";
+            content: '';
             background-color: $two_color;
             height: 4px;
             border-radius: 2px;
             left: 0;
             bottom: 0;
           }
+
           &:hover {
             color: $two_color;
+
             &::before {
               width: 100%;
             }
           }
+
           &:not(:only-child):after {
             padding-left: 5px;
-            content: "\2b";
-            font-family: "Font Awesome 6 Free";
+            content: '\2b';
+            font-family: 'Font Awesome 6 Free';
             font-weight: bold;
             font-size: $large_size;
           }
         }
+
         //dropdown
         .dropdown {
           width: 200px;
@@ -93,12 +101,15 @@ body {
           opacity: 0;
           visibility: hidden;
           transition: 0.4ms all ease-in-out;
+
           li {
             display: block;
             padding-bottom: 15px;
+
             &:last-child {
               padding-bottom: 0;
             }
+
             a {
               font-family: $two_family;
               color: $base_color;
@@ -106,34 +117,39 @@ body {
               font-size: $regular_size;
               text-transform: uppercase;
               position: relative;
+
               &::before {
                 position: absolute;
                 width: 0;
                 margin: -3px 0;
                 transition: 0.4ms all ease-in-out;
-                content: "";
+                content: '';
                 background-color: $two_color;
                 height: 3px;
                 border-radius: 2px;
                 left: 0;
                 bottom: 0;
               }
+
               &:hover {
                 color: $two_color;
+
                 &::before {
                   width: 100%;
                 }
               }
             }
           }
+
           .active {
             position: relative;
+
             &::before {
               position: absolute;
               width: 0;
               margin: -5px 0;
               transition: 0.4ms all ease-in-out;
-              content: "";
+              content: '';
               background-color: $two_color;
               height: 4px;
               border-radius: 2px;
@@ -141,6 +157,7 @@ body {
               bottom: 0;
             }
           }
+
           .active,
           a.active {
             &::before {
@@ -148,20 +165,23 @@ body {
             }
           }
         }
+
         &:hover {
           .dropdown {
             opacity: 1;
             visibility: visible;
           }
         }
+
         .active {
           position: relative;
+
           &::before {
             position: absolute;
             width: 0;
             margin: -5px 0;
             transition: 0.4ms all ease-in-out;
-            content: "";
+            content: '';
             background-color: $two_color;
             height: 4px;
             border-radius: 2px;
@@ -169,6 +189,7 @@ body {
             bottom: 0;
           }
         }
+
         .active,
         a.active {
           &::before {
@@ -183,11 +204,13 @@ body {
       //open
       &_open {
         background-color: transparent;
+
         i {
           font-size: $xlarge_size;
           cursor: pointer;
         }
       }
+
       //input
       &_input {
         position: fixed;
@@ -204,6 +227,7 @@ body {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
         &_close {
           position: absolute;
           top: 0;
@@ -212,11 +236,13 @@ body {
           height: 50px;
           color: $base_color;
           background-color: $two_color;
+
           i {
             font-size: $xlarge_size;
             cursor: pointer;
           }
         }
+
         input {
           width: 100%;
           height: 50px;
@@ -224,6 +250,7 @@ body {
           padding: 15px;
           border: 5px solid $two_color;
         }
+
         .submit {
           margin-top: 20px;
           background-color: $two_color;
@@ -236,6 +263,7 @@ body {
           cursor: pointer;
         }
       }
+
       //Notebook
       @include notebook {
         //open
@@ -277,6 +305,7 @@ body {
       transition: 0.5s all ease-in-out;
       cursor: pointer;
       z-index: 999;
+
       i {
         font-size: 30px;
         color: $two_color;
@@ -301,31 +330,39 @@ body {
         transform: scale(0);
         opacity: 0;
         transition: opacity 650ms;
+
         li {
           display: block;
           margin-right: 0;
           padding-bottom: 30px;
+
           &:last-child {
             padding-bottom: 0;
           }
+
           a {
             font-size: $large_size;
             font-weight: bold;
             color: $primary_color;
+
             &::before {
               background-color: $two_color;
             }
           }
+
           //dropdown
           .dropdown {
             width: 100%;
             top: 30px;
             padding: 15px 0;
+
             li {
               padding-bottom: 12px;
+
               &:last-child {
                 padding-bottom: 0;
               }
+
               a {
                 font-size: 12px;
                 line-height: normal;
@@ -342,6 +379,7 @@ body {
       //&_hamburger
       &_hamburger {
         display: block;
+
         .times {
           display: none;
         }
@@ -350,6 +388,7 @@ body {
         .bars {
           display: none;
         }
+
         .times {
           display: block;
         }
@@ -357,6 +396,7 @@ body {
     }
   }
 }
+
 #header.scroll {
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
   position: fixed;
@@ -398,8 +438,9 @@ body {
     //&_item
     &_item {
       position: relative;
+
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -407,6 +448,7 @@ body {
         height: 100%;
         background-color: rgba(0, 0, 0, 0.3);
       }
+
       //slider_caption
       .slider_caption {
         position: absolute;
@@ -414,6 +456,7 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         color: $base_color;
+
         h6 {
           max-width: 675px;
           font-family: $one_family;
@@ -421,6 +464,7 @@ body {
           letter-spacing: -2.4px;
           font-size: 80px;
         }
+
         p {
           padding-top: 25px;
           max-width: 550px;
@@ -429,9 +473,11 @@ body {
           font-size: 24px;
           line-height: 28px;
         }
+
         //btn
         .btn {
           margin-top: 50px;
+
           a {
             display: inline-block;
             font-family: $three_family;
@@ -442,9 +488,11 @@ body {
             color: $base_color;
             transition: 0.3s all ease-in-out;
             margin-right: 15px;
+
             &:last-child {
               margin-right: 0;
             }
+
             &:focus,
             &:hover {
               background-color: $two_color;
@@ -452,6 +500,7 @@ body {
           }
         }
       }
+
       //Large
       @include large {
         //slider_caption
@@ -459,10 +508,12 @@ body {
           h6 {
             font-size: 60px;
           }
+
           p {
             font-size: 22px;
             line-height: 26px;
           }
+
           .btn {
             margin-top: 40px;
           }
@@ -478,15 +529,18 @@ body {
         .slider_caption {
           max-width: 100%;
           text-align: center;
+
           h6 {
             max-width: 100%;
             font-size: 40px;
           }
+
           p {
             max-width: 100%;
             font-size: $xlarge_size;
             line-height: 22px;
           }
+
           .btn {
             a {
               width: 100%;
@@ -502,13 +556,16 @@ body {
           h6 {
             font-size: 30px;
           }
+
           p {
             padding-top: 20px;
             font-size: $large_size;
             line-height: 20px;
           }
+
           .btn {
             margin-top: 35px;
+
             a {
               padding: 15px 0;
               font-size: $regular_size;
@@ -524,13 +581,16 @@ body {
             font-size: 25px;
             line-height: 28px;
           }
+
           p {
             padding-top: 20px;
             font-size: $regular_size;
             line-height: 18px;
           }
+
           .btn {
             margin-top: 30px;
+
             a {
               padding: 12px 0;
               margin: 0 0 8px 0;
@@ -546,13 +606,16 @@ body {
             font-size: 20px;
             line-height: 23px;
           }
+
           p {
             padding-top: 18px;
             font-size: $small_size;
             line-height: 15px;
           }
+
           .btn {
             margin-top: 25px;
+
             a {
               padding: 10px 0;
               margin: 0 0 6px 0;
@@ -586,8 +649,10 @@ body {
     //&_text
     &_text {
       width: 50%;
+
       .content {
         padding: 0 40px;
+
         h6 {
           font-family: $one_family;
           font-weight: 900;
@@ -595,6 +660,7 @@ body {
           text-transform: capitalize;
           line-height: normal;
         }
+
         p {
           padding-top: 25px;
           font-family: $three_family;
@@ -602,6 +668,7 @@ body {
           font-size: $large_size;
           line-height: 21px;
         }
+
         .read_more {
           display: inline-block;
           padding-top: 30px;
@@ -610,11 +677,12 @@ body {
         }
       }
     }
+
     //&_video
     &_video {
       width: 50%;
       height: 355px;
-      background-image: url("/570x355.png");
+      background-image: url('/570x355.png');
       background-position: center;
       background-size: cover;
       display: flex;
@@ -623,6 +691,7 @@ body {
       //open
       .open {
         cursor: pointer;
+
         i {
           width: 120px;
           height: 120px;
@@ -635,6 +704,7 @@ body {
           align-items: center;
         }
       }
+
       //modal
       .modal {
         width: 100%;
@@ -650,6 +720,7 @@ body {
           top: 0;
           right: 0;
           cursor: pointer;
+
           i {
             width: 35px;
             height: 35px;
@@ -669,9 +740,11 @@ body {
       &_text {
         .content {
           padding: 0 30px;
+
           h6 {
             font-size: 20px;
           }
+
           p {
             padding-top: 20px;
           }
@@ -684,9 +757,11 @@ body {
       &_text {
         .content {
           padding: 0 25px;
+
           h6 {
             font-size: $xlarge_size;
           }
+
           p {
             padding-top: 20px;
           }
@@ -709,11 +784,14 @@ body {
       //&_text
       &_text {
         width: 100%;
+
         .content {
           padding: 30px;
+
           h6 {
             font-size: $xlarge_size;
           }
+
           p {
             padding-top: 20px;
           }
@@ -731,11 +809,14 @@ body {
             font-size: 30px;
           }
         }
+
         //modal
         .modal {
           padding: 30px;
+
           .close {
             top: -17px;
+
             i {
               width: 30px;
               height: 30px;
@@ -762,12 +843,14 @@ body {
     //&_heading
     &_heading {
       display: flex;
+
       h6 {
         font-family: $one_family;
         font-size: 55px;
         font-weight: 900;
         color: $two_color;
       }
+
       p {
         display: flex;
         align-items: flex-end;
@@ -776,6 +859,7 @@ body {
         font-size: $large_size;
         line-height: 20px;
       }
+
       //Large
       @include large {
         h6 {
@@ -849,6 +933,7 @@ body {
           color: $primary_color;
           font-size: 70px;
         }
+
         h5 {
           padding-top: 15px;
           font-family: $three_family;
@@ -859,18 +944,22 @@ body {
           font-size: 21px;
         }
       }
+
       //Large
       @include large {
         padding-top: 60px;
         //&_box
         &_box {
           margin-bottom: 30px;
+
           &:last-child {
             margin-bottom: 0;
           }
+
           .count {
             font-size: 50px;
           }
+
           h5 {
             font-size: $xlarge_size;
           }
@@ -884,6 +973,7 @@ body {
           .count {
             font-size: 40px;
           }
+
           h5 {
             font-size: $large_size;
           }
@@ -896,6 +986,7 @@ body {
           .count {
             font-size: 35px;
           }
+
           h5 {
             padding-top: 10px;
             font-size: $regular_size;
@@ -946,10 +1037,12 @@ body {
           text-transform: capitalize;
           color: $primary_color;
           line-height: normal;
+
           span {
             color: $two_color;
           }
         }
+
         p {
           padding-top: 40px;
           font-family: $three_family;
@@ -958,8 +1051,10 @@ body {
           color: $three_color;
           line-height: 21px;
         }
+
         ul {
           padding-top: 35px;
+
           li {
             display: block;
             font-family: $three_family;
@@ -968,12 +1063,14 @@ body {
             color: $three_color;
             line-height: 21px;
             padding: 0 0 30px 15px;
+
             &:last-child {
               padding: 0 0 0 15px;
             }
+
             &::before {
-              content: "\f00c";
-              font-family: "Font Awesome 6 Free";
+              content: '\f00c';
+              font-family: 'Font Awesome 6 Free';
               font-weight: 900;
               color: $two_color;
               font-size: $large_size;
@@ -982,10 +1079,12 @@ body {
             }
           }
         }
+
         button {
           margin-top: 60px;
           padding: 17px 24px;
           background-color: $two_color;
+
           a {
             font-family: $three_family;
             font-weight: 400;
@@ -1003,6 +1102,7 @@ body {
       height: 830px;
       background-color: $two_color;
       position: relative;
+
       .cover {
         position: absolute;
         top: 50%;
@@ -1020,6 +1120,7 @@ body {
           h6 {
             font-size: 30px;
           }
+
           p {
             padding-top: 30px;
           }
@@ -1043,6 +1144,7 @@ body {
           max-width: 100%;
           padding: 30px 60px;
           position: relative;
+
           ul {
             li {
               &::before {
@@ -1067,14 +1169,17 @@ body {
           h6 {
             font-size: 25px;
           }
+
           p {
             padding-top: 27px;
           }
+
           ul {
             li {
               padding: 0 0 20px 13px;
             }
           }
+
           button {
             margin-top: 50px;
           }
@@ -1090,11 +1195,13 @@ body {
           h6 {
             font-size: 20px;
           }
+
           p {
             padding-top: 20px;
             font-size: $regular_size;
             line-height: 19px;
           }
+
           ul {
             li {
               font-size: $regular_size;
@@ -1102,9 +1209,11 @@ body {
               padding: 0 0 20px 13px;
             }
           }
+
           button {
             margin-top: 40px;
             padding: 12px 20px;
+
             a {
               font-size: $regular_size;
             }
@@ -1119,6 +1228,7 @@ body {
         //content
         .content {
           padding: 20px 40px;
+
           h6 {
             font-size: $xlarge_size;
           }
@@ -1132,27 +1242,34 @@ body {
         //content
         .content {
           padding: 20px;
+
           h6 {
             font-size: $large_size;
           }
+
           p {
             font-size: $small_size;
             line-height: 17px;
           }
+
           ul {
             padding-top: 30px;
+
             li {
               font-size: $small_size;
               line-height: 16px;
               padding: 0 0 15px 14px;
+
               &::before {
                 left: 15px;
               }
             }
           }
+
           button {
             margin-top: 35px;
             padding: 10px 20px;
+
             a {
               font-size: $small_size;
               line-height: normal;
@@ -1174,16 +1291,19 @@ body {
     //&_heading
     &_heading {
       text-align: center;
+
       h6 {
         font-family: $one_family;
         font-weight: 900;
         line-height: normal;
         font-size: 35px;
         text-transform: capitalize;
+
         span {
           color: $two_color;
         }
       }
+
       //Notebook
       @include notebook {
         h6 {
@@ -1217,9 +1337,11 @@ body {
       &_box {
         display: flex;
         margin-bottom: 50px;
+
         &:last-child {
           margin-bottom: 0;
         }
+
         //icon
         .icon {
           i {
@@ -1227,9 +1349,11 @@ body {
             color: $two_color;
           }
         }
+
         //text
         .text {
           padding-left: 33px;
+
           h6 {
             a {
               font-family: $one_family;
@@ -1239,6 +1363,7 @@ body {
               line-height: 25px;
             }
           }
+
           p {
             padding-top: 15px;
             font-family: $three_color;
@@ -1248,6 +1373,7 @@ body {
             letter-spacing: 0.3px;
           }
         }
+
         //Large
         @include large {
           .text {
@@ -1257,6 +1383,7 @@ body {
                 line-height: normal;
               }
             }
+
             p {
               padding-top: 12px;
             }
@@ -1268,12 +1395,14 @@ body {
           flex-direction: column;
           .text {
             padding: 15px 0 0 0;
+
             h6 {
               a {
                 font-size: $large_size;
                 line-height: normal;
               }
             }
+
             p {
               padding-top: 12px;
               font-size: $regular_size;
@@ -1285,12 +1414,14 @@ body {
         @include x_tablet {
           .text {
             padding: 14px 0 0 0;
+
             h6 {
               a {
                 font-size: $regular_size;
                 line-height: normal;
               }
             }
+
             p {
               padding-top: 12px;
               font-size: $regular_size;
@@ -1302,6 +1433,7 @@ body {
         @include mobil {
           .text {
             padding: 14px 0 0 0;
+
             p {
               font-size: $small_size;
               line-height: 17px;
@@ -1309,6 +1441,7 @@ body {
           }
         }
       }
+
       //Notebook
       @include notebook {
         padding-top: 65px;
@@ -1330,7 +1463,7 @@ body {
       rgba(58, 181, 74, 0.7),
       rgba(58, 181, 74, 0.7)
     ),
-    url("/1920x650.png");
+    url('/1920x650.png');
   background-position: center;
   background-size: cover;
 
@@ -1338,11 +1471,13 @@ body {
   .text {
     text-align: center;
     color: $base_color;
+
     h6 {
       font-family: $one_family;
       font-weight: 900;
       font-size: 60px;
     }
+
     p {
       padding-top: 40px;
       max-width: 670px;
@@ -1413,8 +1548,9 @@ body {
     //&_item
     &_item {
       position: relative;
+
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -1422,9 +1558,11 @@ body {
         width: 100%;
         height: 100%;
       }
+
       img {
         width: 100%;
       }
+
       //client_caption
       .client_caption {
         position: absolute;
@@ -1433,6 +1571,7 @@ body {
         transform: translate(-50%, -50%);
         padding-left: 120px;
         color: $base_color;
+
         h4 {
           max-width: 655px;
           font-family: $three_family;
@@ -1440,12 +1579,14 @@ body {
           line-height: normal;
           font-style: italic;
         }
+
         h5 {
           padding-top: 50px;
           font-family: $one_family;
           font-weight: 900;
           font-size: 21px;
         }
+
         h6 {
           padding-top: 15px;
           font-family: $three_family;
@@ -1533,16 +1674,19 @@ body {
     //&_heading
     &_heading {
       text-align: center;
+
       h6 {
         font-family: $one_family;
         font-weight: 900;
         line-height: normal;
         font-size: 35px;
         text-transform: capitalize;
+
         span {
           color: $two_color;
         }
       }
+
       //Notebook
       @include notebook {
         h6 {
@@ -1577,8 +1721,10 @@ body {
         img {
           width: 100%;
         }
+
         h6 {
           padding-top: 25px;
+
           a {
             font-family: $one_family;
             font-weight: 900;
@@ -1587,6 +1733,7 @@ body {
             color: $primary_color;
           }
         }
+
         //blog_desc
         .blog_desc {
           padding-top: 30px;
@@ -1594,14 +1741,17 @@ body {
           font-family: $three_family;
           color: $three_color;
           font-size: $large_size;
+
           .date {
             border-right: 1px solid #e2e2e2;
             padding-right: 15px;
           }
+
           .category {
             padding-left: 15px;
           }
         }
+
         p {
           padding-top: 35px;
           font-family: $three_family;
@@ -1609,6 +1759,7 @@ body {
           font-size: $large_size;
           line-height: 21px;
         }
+
         .read_more {
           display: inline-block;
           margin-top: 20px;
@@ -1627,6 +1778,7 @@ body {
         &_box {
           h6 {
             padding-top: 20px;
+
             a {
               font-size: $xlarge_size;
               line-height: 22px;
@@ -1639,9 +1791,11 @@ body {
         //&_box
         &_box {
           margin-bottom: 40px;
+
           &:last-child {
             margin-bottom: 0;
           }
+
           h6 {
             a {
               font-size: $large_size;
@@ -1658,18 +1812,22 @@ body {
           .blog_desc {
             padding-top: 25px;
             font-size: $regular_size;
+
             .date {
               padding-right: 10px;
             }
+
             .category {
               padding-left: 10px;
             }
           }
+
           p {
             padding-top: 25px;
             font-size: $regular_size;
             line-height: 19px;
           }
+
           .read_more {
             font-size: $regular_size;
           }
@@ -1681,19 +1839,23 @@ body {
         &_box {
           h6 {
             padding-top: 17px;
+
             a {
               font-size: $regular_size;
               line-height: 18px;
             }
           }
+
           //blog_desc
           .blog_desc {
             font-size: $small_size;
           }
+
           p {
             font-size: $small_size;
             line-height: 17px;
           }
+
           .read_more {
             font-size: $small_size;
           }
@@ -1718,11 +1880,13 @@ body {
     //&_text
     &_text {
       color: $base_color;
+
       h6 {
         font-family: $one_family;
         font-weight: 900;
         font-size: 35px;
       }
+
       p {
         padding-top: 25px;
         max-width: 600px;
@@ -1732,6 +1896,7 @@ body {
         line-height: 21px;
       }
     }
+
     //&_btn
     &_btn {
       button {
@@ -1757,6 +1922,7 @@ body {
         h6 {
           font-size: 30px;
         }
+
         p {
           padding-top: 22px;
         }
@@ -1764,6 +1930,7 @@ body {
       //&_btn
       &_btn {
         margin-top: 30px;
+
         button {
           width: 100%;
           padding: 20px 40px;
@@ -1777,6 +1944,7 @@ body {
         h6 {
           font-size: 25px;
         }
+
         p {
           padding-top: 20px;
           max-width: 100%;
@@ -1788,6 +1956,7 @@ body {
       &_btn {
         button {
           padding: 15px 35px;
+
           a {
             font-size: $regular_size;
           }
@@ -1802,6 +1971,7 @@ body {
           font-size: 20px;
           line-height: normal;
         }
+
         p {
           padding-top: 13px;
         }
@@ -1821,6 +1991,7 @@ body {
         h6 {
           font-size: $large_size;
         }
+
         p {
           font-size: $small_size;
           line-height: 16px;
@@ -1829,9 +2000,11 @@ body {
       //&_btn
       &_btn {
         margin-top: 25px;
+
         button {
           width: 100%;
           padding: 10px 20px;
+
           a {
             font-size: $small_size;
           }
@@ -1846,7 +2019,7 @@ body {
   width: 100%;
   padding: 100px 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/1920x500.png");
+    url('/1920x500.png');
   background-position: center;
   background-size: cover;
 
@@ -1862,20 +2035,25 @@ body {
         line-height: 21px;
         letter-spacing: 0.3px;
       }
+
       //social
       .social {
         padding-top: 40px;
+
         li {
           display: inline-block;
           margin-right: 30px;
+
           &:last-child {
             margin-right: 0;
           }
+
           a {
             i {
               color: $base_color;
               font-size: 24px;
               transition: 0.3s all ease-in-out;
+
               &:hover {
                 color: $two_color;
               }
@@ -1883,6 +2061,7 @@ body {
           }
         }
       }
+
       h6 {
         font-family: $one_family;
         color: $base_color;
@@ -1890,52 +2069,62 @@ body {
         font-weight: 900;
         padding-bottom: 30px;
       }
+
       //links
       .links {
         li {
           display: block;
           position: relative;
           padding: 0 0 20px 19px;
+
           &:last-child {
             padding: 0 0 0 20px;
           }
+
           a {
             font-family: $two_family;
             font-size: $large_size;
             font-weight: 400;
             color: $base_color;
             transition: 0.3s all ease-in-out;
+
             &::before {
               position: absolute;
               top: 0;
               left: 0;
-              content: "\f054";
-              font-family: "Font Awesome 6 Free";
+              content: '\f054';
+              font-family: 'Font Awesome 6 Free';
               font-weight: 900;
             }
+
             &:hover {
               color: $two_color;
             }
           }
         }
       }
+
       //desc
       .desc {
         //&_item
         &_item {
           display: flex;
           padding-bottom: 20px;
+
           &:last-child {
             padding-bottom: 0;
           }
+
           .icon {
             i {
               font-size: 21px;
               color: $two_color;
             }
           }
+
           .text {
             padding-left: 18px;
+
             h5,
             a {
               font-family: $two_family;
@@ -1964,8 +2153,10 @@ body {
         //social
         .social {
           padding-top: 35px;
+
           li {
             margin-right: 25px;
+
             a {
               i {
                 font-size: $xlarge_size;
@@ -1980,6 +2171,7 @@ body {
         .links {
           li {
             padding: 0 0 18px 20px;
+
             a {
               font-size: $regular_size;
             }
@@ -1989,13 +2181,16 @@ body {
         .desc {
           &_item {
             padding-bottom: 15px;
+
             .icon {
               i {
                 font-size: $xlarge_size;
               }
             }
+
             .text {
               padding-left: 15px;
+
               h5,
               a {
                 line-height: 16px;
@@ -2015,8 +2210,10 @@ body {
         //social
         .social {
           padding-top: 30px;
+
           li {
             margin-right: 20px;
+
             a {
               i {
                 font-size: $large_size;
@@ -2032,8 +2229,10 @@ body {
         .links {
           li {
             padding: 0 0 12px 18px;
+
             a {
               font-size: $small_size;
+
               &::before {
                 top: 2px;
               }
@@ -2044,13 +2243,16 @@ body {
         .desc {
           &_item {
             padding-bottom: 13px;
+
             .icon {
               i {
                 font-size: $large_size;
               }
             }
+
             .text {
               padding-left: 12px;
+
               h5,
               a {
                 font-size: $small_size;
@@ -2068,6 +2270,7 @@ body {
   width: 100%;
   background-color: $primary_color;
   padding: 30px 0;
+
   .text {
     text-align: center;
     color: $base_color;
@@ -2098,6 +2301,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+
     h6 {
       font-family: $one_family;
       font-weight: 900;
@@ -2105,8 +2309,9 @@ body {
       color: $two_color;
       text-transform: capitalize;
       position: relative;
+
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         bottom: -27px;
         left: 0;
@@ -2182,10 +2387,12 @@ body {
         line-height: normal;
         font-size: 35px;
         text-transform: capitalize;
+
         span {
           color: $two_color;
         }
       }
+
       .regular {
         padding-top: 40px;
         font-family: $three_family;
@@ -2195,6 +2402,7 @@ body {
         letter-spacing: 0.4px;
         color: $three_color;
       }
+
       .italic {
         padding-top: 15px;
         font-family: $three_family;
@@ -2205,6 +2413,7 @@ body {
         line-height: 21px;
         color: $three_color;
       }
+
       h4 {
         padding-top: 35px;
         font-family: $one_family;
@@ -2213,6 +2422,7 @@ body {
         line-height: normal;
         font-size: 21px;
       }
+
       h5 {
         padding-top: 15px;
         font-family: $three_family;
@@ -2228,15 +2438,19 @@ body {
       //&_text
       &_text {
         padding-top: 25px;
+
         h6 {
           font-size: 30px;
         }
+
         .regular {
           padding-top: 30px;
         }
+
         h4 {
           font-size: $xlarge_size;
         }
+
         h5 {
           padding-top: 12px;
         }
@@ -2249,17 +2463,21 @@ body {
         h6 {
           font-size: 25px;
         }
+
         .regular {
           padding-top: 20px;
           font-size: $regular_size;
         }
+
         .italic {
           font-size: $large_size;
         }
+
         h4 {
           padding-top: 25px;
           font-size: $large_size;
         }
+
         h5 {
           padding-top: 10px;
           font-size: $regular_size;
@@ -2273,12 +2491,15 @@ body {
         h6 {
           font-size: $xlarge_size;
         }
+
         .regular {
           padding-top: 15px;
         }
+
         .italic {
           font-size: $regular_size;
         }
+
         h4 {
           padding-top: 25px;
           font-size: $regular_size;
@@ -2292,19 +2513,23 @@ body {
         h6 {
           font-size: $large_size;
         }
+
         .regular {
           padding-top: 15px;
           font-size: $small_size;
           line-height: 17px;
         }
+
         .italic {
           font-size: $small_size;
           line-height: 17px;
         }
+
         h4 {
           padding-top: 20px;
           font-size: $small_size;
         }
+
         h5 {
           padding-top: 8px;
           font-size: $small_size;
@@ -2331,10 +2556,12 @@ body {
         line-height: normal;
         font-size: 35px;
         text-transform: capitalize;
+
         span {
           color: $two_color;
         }
       }
+
       //Notebook
       @include notebook {
         h6 {
@@ -2369,13 +2596,16 @@ body {
         border: 1px solid $six_color;
         padding: 40px 60px;
         transition: 0.3s all ease-in-out;
+
         i {
           color: $two_color;
           font-size: 60px;
         }
+
         h6 {
           padding-top: 25px;
           line-height: normal;
+
           a {
             font-family: $three_family;
             color: $primary_color;
@@ -2384,6 +2614,7 @@ body {
             text-transform: capitalize;
           }
         }
+
         p {
           padding-top: 15px;
           font-family: $three_family;
@@ -2391,21 +2622,26 @@ body {
           line-height: 21px;
           color: $three_color;
         }
+
         &:hover {
           border: 1px solid $two_color;
           background-color: $two_color;
+
           i {
             color: $base_color;
           }
+
           h6 {
             a {
               color: $base_color;
             }
           }
+
           p {
             color: $base_color;
           }
         }
+
         //Large
         @include large {
           padding: 25px 40px;
@@ -2427,6 +2663,7 @@ body {
           padding: 15px 30px;
           h6 {
             padding-top: 17px;
+
             a {
               font-size: $large_size;
             }
@@ -2445,6 +2682,7 @@ body {
           }
           h6 {
             padding-top: 14px;
+
             a {
               font-size: $regular_size;
             }
@@ -2491,10 +2729,12 @@ body {
           text-transform: capitalize;
           color: $primary_color;
           line-height: normal;
+
           span {
             color: $two_color;
           }
         }
+
         p {
           padding-top: 40px;
           font-family: $three_family;
@@ -2503,8 +2743,10 @@ body {
           color: $three_color;
           line-height: 21px;
         }
+
         ul {
           padding-top: 35px;
+
           li {
             display: block;
             font-family: $three_family;
@@ -2513,12 +2755,14 @@ body {
             color: $three_color;
             line-height: 21px;
             padding: 0 0 30px 15px;
+
             &:last-child {
               padding: 0 0 0 15px;
             }
+
             &::before {
-              content: "\f00c";
-              font-family: "Font Awesome 6 Free";
+              content: '\f00c';
+              font-family: 'Font Awesome 6 Free';
               font-weight: 900;
               color: $two_color;
               font-size: $large_size;
@@ -2527,10 +2771,12 @@ body {
             }
           }
         }
+
         button {
           margin-top: 60px;
           padding: 17px 24px;
           background-color: $two_color;
+
           a {
             font-family: $three_family;
             font-weight: 400;
@@ -2551,7 +2797,7 @@ body {
           rgba(0, 0, 0, 0.5),
           rgba(0, 0, 0, 0.5)
         ),
-        url("/945x725.png");
+        url('/945x725.png');
       background-position: center;
       background-size: cover;
 
@@ -2559,6 +2805,7 @@ body {
       .right_content {
         padding-top: 100px;
         padding-left: 70px;
+
         h6 {
           font-family: $one_family;
           font-size: 35px;
@@ -2566,21 +2813,26 @@ body {
           text-transform: capitalize;
           color: $base_color;
           line-height: normal;
+
           span {
             color: $two_color;
           }
         }
+
         //skills
         .skills {
           max-width: 500px;
           padding-top: 55px;
+
           .skill-box {
             width: 100%;
             margin-bottom: 40px;
+
             &:last-child {
               margin-bottom: 0;
             }
           }
+
           .skill-box .title {
             font-family: $three_family;
             text-transform: capitalize;
@@ -2588,12 +2840,14 @@ body {
             font-weight: 400;
             color: $base_color;
           }
+
           .skill-box .skill-bar {
             height: 8px;
             width: 100%;
             margin-top: 10px;
             background-color: $six_color;
           }
+
           .skill-bar .skill-per {
             position: relative;
             display: block;
@@ -2602,18 +2856,22 @@ body {
             background-color: $two_color;
             animation: progress 0.4s ease-in-out forwards;
           }
+
           .skill-per.html {
             width: 50%;
             animation-delay: 0.1s;
           }
+
           .skill-per.css {
             width: 70%;
             animation-delay: 0.1s;
           }
+
           .skill-per.javascript {
             width: 50%;
             animation-delay: 0.2s;
           }
+
           .skill-per.nodejs {
             width: 30%;
             animation-delay: 0.3s;
@@ -2642,6 +2900,7 @@ body {
           h6 {
             font-size: 30px;
           }
+
           p {
             padding-top: 30px;
           }
@@ -2668,6 +2927,7 @@ body {
           max-width: 100%;
           padding: 30px 60px;
           position: relative;
+
           ul {
             li {
               &::before {
@@ -2684,6 +2944,7 @@ body {
         //right_content
         .right_content {
           padding-left: 0;
+
           .skills {
             max-width: 100%;
           }
@@ -2699,14 +2960,17 @@ body {
           h6 {
             font-size: 25px;
           }
+
           p {
             padding-top: 27px;
           }
+
           ul {
             li {
               padding: 0 0 20px 13px;
             }
           }
+
           button {
             margin-top: 50px;
           }
@@ -2731,11 +2995,13 @@ body {
           h6 {
             font-size: 20px;
           }
+
           p {
             padding-top: 20px;
             font-size: $regular_size;
             line-height: 19px;
           }
+
           ul {
             li {
               font-size: $regular_size;
@@ -2743,9 +3009,11 @@ body {
               padding: 0 0 20px 13px;
             }
           }
+
           button {
             margin-top: 40px;
             padding: 12px 20px;
+
             a {
               font-size: $regular_size;
             }
@@ -2759,6 +3027,7 @@ body {
           h6 {
             font-size: 20px;
           }
+
           //skills
           .skills {
             .skill-box {
@@ -2777,6 +3046,7 @@ body {
         //content
         .content {
           padding: 20px 40px;
+
           h6 {
             font-size: $xlarge_size;
           }
@@ -2789,12 +3059,15 @@ body {
           padding-top: 100px;
           padding-left: 20px;
           padding-right: 20px;
+
           h6 {
             font-size: $xlarge_size;
           }
+
           //skills
           .skills {
             padding-top: 45px;
+
             .skill-box {
               margin-bottom: 30px;
             }
@@ -2809,27 +3082,34 @@ body {
         //content
         .content {
           padding: 20px;
+
           h6 {
             font-size: $large_size;
           }
+
           p {
             font-size: $small_size;
             line-height: 17px;
           }
+
           ul {
             padding-top: 30px;
+
             li {
               font-size: $small_size;
               line-height: 16px;
               padding: 0 0 15px 14px;
+
               &::before {
                 left: 15px;
               }
             }
           }
+
           button {
             margin-top: 35px;
             padding: 10px 20px;
+
             a {
               font-size: $small_size;
               line-height: normal;
@@ -2844,12 +3124,14 @@ body {
           h6 {
             font-size: $large_size;
           }
+
           //skills
           .skills {
             .skill-box {
               .title {
                 font-size: $small_size;
               }
+
               .skill-bar {
                 margin-top: 8px;
               }
@@ -2877,10 +3159,12 @@ body {
         line-height: normal;
         font-size: 35px;
         text-transform: capitalize;
+
         span {
           color: $two_color;
         }
       }
+
       //Notebook
       @include notebook {
         h6 {
@@ -2913,12 +3197,15 @@ body {
       //&_box
       &_box {
         border-bottom: 3px solid $two_color;
+
         img {
           width: 100%;
         }
+
         h6 {
           padding-top: 25px;
           line-height: normal;
+
           a {
             font-family: $one_family;
             font-weight: 900;
@@ -2927,6 +3214,7 @@ body {
             font-size: 21px;
           }
         }
+
         h5 {
           padding-top: 15px;
           font-family: $three_family;
@@ -2937,21 +3225,26 @@ body {
           padding-bottom: 35px;
         }
       }
+
       //Notebook
       @include notebook {
         div {
           margin-bottom: 40px;
+
           &:last-child {
             margin-bottom: 0;
           }
+
           //&_box
           .about_teams_items_box {
             h6 {
               padding-top: 20px;
+
               a {
                 font-size: $xlarge_size;
               }
             }
+
             h5 {
               padding-top: 12px;
               padding-bottom: 25px;
@@ -2969,6 +3262,7 @@ body {
                 font-size: $large_size;
               }
             }
+
             h5 {
               padding-top: 10px;
               padding-bottom: 20px;
@@ -2987,6 +3281,7 @@ body {
                 font-size: $regular_size;
               }
             }
+
             h5 {
               font-size: $small_size;
             }
@@ -3010,9 +3305,11 @@ body {
     &_item {
       display: flex;
       margin-bottom: 50px;
+
       &:last-child {
         margin-bottom: 0;
       }
+
       //icon
       .icon {
         i {
@@ -3020,9 +3317,11 @@ body {
           color: $two_color;
         }
       }
+
       //text
       .text {
         padding-left: 33px;
+
         h6 {
           a {
             font-family: $one_family;
@@ -3032,6 +3331,7 @@ body {
             line-height: 25px;
           }
         }
+
         p {
           padding-top: 15px;
           font-family: $three_color;
@@ -3040,6 +3340,7 @@ body {
           line-height: 21px;
           letter-spacing: 0.3px;
         }
+
         .read_more {
           display: inline-block;
           padding-top: 30px;
@@ -3050,6 +3351,7 @@ body {
           color: $two_color;
         }
       }
+
       //Large
       @include large {
         .text {
@@ -3059,9 +3361,11 @@ body {
               line-height: normal;
             }
           }
+
           .read_more {
             padding-top: 25px;
           }
+
           p {
             padding-top: 12px;
           }
@@ -3073,17 +3377,20 @@ body {
         flex-direction: column;
         .text {
           padding: 15px 0 0 0;
+
           h6 {
             a {
               font-size: $large_size;
               line-height: normal;
             }
           }
+
           p {
             padding-top: 12px;
             font-size: $regular_size;
             line-height: 19px;
           }
+
           .read_more {
             padding-top: 20px;
             font-size: $regular_size;
@@ -3094,12 +3401,14 @@ body {
       @include x_tablet {
         .text {
           padding: 14px 0 0 0;
+
           h6 {
             a {
               font-size: $regular_size;
               line-height: normal;
             }
           }
+
           p {
             padding-top: 12px;
             font-size: $regular_size;
@@ -3111,10 +3420,12 @@ body {
       @include mobil {
         .text {
           padding: 14px 0 0 0;
+
           p {
             font-size: $small_size;
             line-height: 17px;
           }
+
           .read_more {
             font-size: $small_size;
           }
@@ -3157,10 +3468,12 @@ body {
           text-transform: capitalize;
           color: $primary_color;
           line-height: normal;
+
           span {
             color: $two_color;
           }
         }
+
         p {
           padding-top: 40px;
           font-family: $three_family;
@@ -3169,8 +3482,10 @@ body {
           color: $three_color;
           line-height: 21px;
         }
+
         ul {
           padding-top: 35px;
+
           li {
             display: block;
             font-family: $three_family;
@@ -3179,12 +3494,14 @@ body {
             color: $three_color;
             line-height: 21px;
             padding: 0 0 30px 15px;
+
             &:last-child {
               padding: 0 0 0 15px;
             }
+
             &::before {
-              content: "\f00c";
-              font-family: "Font Awesome 6 Free";
+              content: '\f00c';
+              font-family: 'Font Awesome 6 Free';
               font-weight: 900;
               color: $two_color;
               font-size: $large_size;
@@ -3202,6 +3519,7 @@ body {
       height: 830px;
       background-color: $two_color;
       position: relative;
+
       .cover {
         position: absolute;
         top: 38.5%;
@@ -3219,6 +3537,7 @@ body {
           h6 {
             font-size: 30px;
           }
+
           p {
             padding-top: 30px;
           }
@@ -3243,6 +3562,7 @@ body {
           max-width: 100%;
           padding: 30px 60px;
           position: relative;
+
           ul {
             li {
               &::before {
@@ -3267,9 +3587,11 @@ body {
           h6 {
             font-size: 25px;
           }
+
           p {
             padding-top: 27px;
           }
+
           ul {
             li {
               padding: 0 0 20px 13px;
@@ -3287,11 +3609,13 @@ body {
           h6 {
             font-size: 20px;
           }
+
           p {
             padding-top: 20px;
             font-size: $regular_size;
             line-height: 19px;
           }
+
           ul {
             li {
               font-size: $regular_size;
@@ -3309,6 +3633,7 @@ body {
         //content
         .content {
           padding: 20px 40px;
+
           h6 {
             font-size: $xlarge_size;
           }
@@ -3322,19 +3647,24 @@ body {
         //content
         .content {
           padding: 20px;
+
           h6 {
             font-size: $large_size;
           }
+
           p {
             font-size: $small_size;
             line-height: 17px;
           }
+
           ul {
             padding-top: 30px;
+
             li {
               font-size: $small_size;
               line-height: 16px;
               padding: 0 0 15px 14px;
+
               &::before {
                 left: 15px;
               }
@@ -3370,10 +3700,12 @@ body {
         text-transform: capitalize;
         color: $primary_color;
         line-height: normal;
+
         span {
           color: $two_color;
         }
       }
+
       p {
         padding-top: 40px;
         font-family: $three_family;
@@ -3382,9 +3714,11 @@ body {
         color: $three_color;
         line-height: 21px;
       }
+
       ul {
         padding-top: 35px;
         position: relative;
+
         li {
           display: block;
           font-family: $three_family;
@@ -3393,12 +3727,14 @@ body {
           color: $three_color;
           line-height: 21px;
           padding: 0 0 30px 22px;
+
           &:last-child {
             padding: 0 0 0 22px;
           }
+
           &::before {
-            content: "\f00c";
-            font-family: "Font Awesome 6 Free";
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             color: $two_color;
             font-size: $large_size;
@@ -3416,6 +3752,7 @@ body {
         h6 {
           font-size: 30px;
         }
+
         p {
           padding-top: 30px;
         }
@@ -3426,12 +3763,15 @@ body {
       //&_text
       &_text {
         margin-top: 40px;
+
         h6 {
           font-size: 25px;
         }
+
         p {
           padding-top: 27px;
         }
+
         ul {
           li {
             padding: 0 0 20px 20px;
@@ -3446,11 +3786,13 @@ body {
         h6 {
           font-size: 20px;
         }
+
         p {
           padding-top: 20px;
           font-size: $regular_size;
           line-height: 19px;
         }
+
         ul {
           li {
             font-size: $regular_size;
@@ -3476,19 +3818,24 @@ body {
         h6 {
           font-size: $large_size;
         }
+
         p {
           font-size: $small_size;
           line-height: 17px;
         }
+
         ul {
           padding-top: 30px;
+
           li {
             font-size: $small_size;
             line-height: 16px;
             padding: 0 0 15px 18px;
+
             &:last-child {
               padding: 0 0 0 18px;
             }
+
             &::before {
               left: 0;
             }
@@ -3509,16 +3856,19 @@ body {
     //&_heading
     &_heading {
       text-align: center;
+
       h6 {
         font-family: $one_family;
         font-weight: 900;
         line-height: normal;
         font-size: 35px;
         text-transform: capitalize;
+
         span {
           color: $two_color;
         }
       }
+
       //Notebook
       @include notebook {
         h6 {
@@ -3552,9 +3902,11 @@ body {
       &_item {
         display: flex;
         margin-bottom: 50px;
+
         &:last-child {
           margin-bottom: 0;
         }
+
         //icon
         .icon {
           i {
@@ -3562,9 +3914,11 @@ body {
             color: $two_color;
           }
         }
+
         //text
         .text {
           padding-left: 33px;
+
           h6 {
             a {
               font-family: $one_family;
@@ -3574,6 +3928,7 @@ body {
               line-height: 25px;
             }
           }
+
           p {
             padding-top: 15px;
             font-family: $three_color;
@@ -3582,6 +3937,7 @@ body {
             line-height: 21px;
             letter-spacing: 0.3px;
           }
+
           .read_more {
             display: inline-block;
             padding-top: 30px;
@@ -3592,6 +3948,7 @@ body {
             color: $two_color;
           }
         }
+
         //Large
         @include large {
           .text {
@@ -3601,9 +3958,11 @@ body {
                 line-height: normal;
               }
             }
+
             .read_more {
               padding-top: 25px;
             }
+
             p {
               padding-top: 12px;
             }
@@ -3615,17 +3974,20 @@ body {
           flex-direction: column;
           .text {
             padding: 15px 0 0 0;
+
             h6 {
               a {
                 font-size: $large_size;
                 line-height: normal;
               }
             }
+
             p {
               padding-top: 12px;
               font-size: $regular_size;
               line-height: 19px;
             }
+
             .read_more {
               padding-top: 20px;
               font-size: $regular_size;
@@ -3636,12 +3998,14 @@ body {
         @include x_tablet {
           .text {
             padding: 14px 0 0 0;
+
             h6 {
               a {
                 font-size: $regular_size;
                 line-height: normal;
               }
             }
+
             p {
               padding-top: 12px;
               font-size: $regular_size;
@@ -3653,10 +4017,12 @@ body {
         @include mobil {
           .text {
             padding: 14px 0 0 0;
+
             p {
               font-size: $small_size;
               line-height: 17px;
             }
+
             .read_more {
               font-size: $small_size;
             }
@@ -3682,16 +4048,19 @@ body {
     //&_heading
     &_heading {
       text-align: center;
+
       h6 {
         font-family: $one_family;
         font-weight: 900;
         line-height: normal;
         font-size: 35px;
         text-transform: capitalize;
+
         span {
           color: $two_color;
         }
       }
+
       //Notebook
       @include notebook {
         h6 {
@@ -3729,6 +4098,7 @@ body {
         background-color: $base_color;
         padding: 35px;
         transition: 0.3s all ease-in-out;
+
         h4 {
           position: relative;
           top: -60px;
@@ -3743,6 +4113,7 @@ body {
           text-transform: capitalize;
           font-size: $large_size;
         }
+
         h5 {
           font-family: $three_family;
           color: $three_color;
@@ -3750,6 +4121,7 @@ body {
           font-size: $large_size;
           line-height: normal;
         }
+
         h6 {
           padding-top: 10px;
           font-family: $one_family;
@@ -3759,6 +4131,7 @@ body {
           font-size: 35px;
           line-height: normal;
         }
+
         p {
           padding-top: 10px;
           font-family: $three_family;
@@ -3767,38 +4140,45 @@ body {
           line-height: normal;
           color: $three_color;
         }
+
         //ul
         ul {
           padding-top: 50px;
           text-align: left;
+
           li {
             display: block;
             position: relative;
             padding: 0 0 20px 30px;
+
             &:last-child {
               padding: 0 0 0 30px;
             }
+
             a {
               font-family: $three_family;
               font-size: $large_size;
               font-weight: 400;
               color: $three_color;
               transition: 0.3s all ease-in-out;
+
               &::before {
                 position: absolute;
                 top: 0;
                 left: 0;
-                content: "\f058";
-                font-family: "Font Awesome 6 Free";
+                content: '\f058';
+                font-family: 'Font Awesome 6 Free';
                 font-weight: 900;
                 color: $two_color;
               }
+
               &:hover {
                 color: $two_color;
               }
             }
           }
         }
+
         .read_more {
           display: inline-block;
           margin-top: 70px;
@@ -3812,23 +4192,28 @@ body {
           font-size: $large_size;
           line-height: 55px;
         }
+
         &:hover {
           background-color: $two_color;
+
           h5,
           h6,
           p {
             color: $base_color;
           }
+
           ul {
             li {
               a {
                 color: $base_color;
+
                 &::before {
                   color: $base_color;
                 }
               }
             }
           }
+
           .read_more {
             background-color: $primary_color;
           }
@@ -3840,9 +4225,11 @@ body {
         //&_box
         &_box {
           padding: 30px;
+
           h4 {
             top: -50px;
           }
+
           h6 {
             font-size: 30px;
           }
@@ -3854,35 +4241,44 @@ body {
         &_box {
           margin-bottom: 30px;
           padding: 25px;
+
           h4 {
             top: -40px;
             height: 35px;
             line-height: 35px;
             font-size: $regular_size;
           }
+
           h5 {
             font-size: $regular_size;
           }
+
           h6 {
             font-size: 25px;
           }
+
           p {
             font-size: $regular_size;
           }
+
           ul {
             li {
               padding: 0 0 15px 25px;
+
               &:last-child {
                 padding: 0 0 0 25px;
               }
+
               a {
                 font-size: $regular_size;
+
                 &::before {
                   top: 1px;
                 }
               }
             }
           }
+
           .read_more {
             margin-top: 50px;
             height: 45px;
@@ -3896,17 +4292,21 @@ body {
         //&_box
         &_box {
           padding: 20px;
+
           h4 {
             top: 0px;
             height: 30px;
             line-height: 30px;
           }
+
           h5 {
             padding-top: 15px;
           }
+
           h6 {
             font-size: 20px;
           }
+
           .read_more {
             height: 35px;
             line-height: 35px;
@@ -3918,22 +4318,27 @@ body {
         //&_box
         &_box {
           padding: 15px;
+
           h4 {
             top: 0px;
             height: 30px;
             line-height: 30px;
             font-size: $small_size;
           }
+
           h5 {
             padding-top: 15px;
             font-size: $small_size;
           }
+
           h6 {
             font-size: $xlarge_size;
           }
+
           p {
             font-size: $small_size;
           }
+
           .read_more {
             height: 30px;
             line-height: 30px;
@@ -3956,16 +4361,19 @@ body {
     //&_heading
     &_heading {
       text-align: center;
+
       h6 {
         font-family: $one_family;
         font-weight: 900;
         line-height: normal;
         font-size: 35px;
         text-transform: capitalize;
+
         span {
           color: $two_color;
         }
       }
+
       //Notebook
       @include notebook {
         h6 {
@@ -4000,6 +4408,7 @@ body {
       &_item {
         border: 1px solid $six_color;
         padding: 30px 40px;
+
         p {
           font-family: $three_family;
           color: $three_color;
@@ -4008,9 +4417,10 @@ body {
           line-height: normal;
           position: relative;
           z-index: 1;
+
           &::before {
-            content: "\f10e";
-            font-family: "Font Awesome 6 Free";
+            content: '\f10e';
+            font-family: 'Font Awesome 6 Free';
             font-size: 120px;
             color: $seven_color;
             position: absolute;
@@ -4020,6 +4430,7 @@ body {
             font-weight: 900;
           }
         }
+
         //client_desc
         .client_desc {
           padding-top: 25px;
@@ -4031,9 +4442,11 @@ body {
               border-radius: 50%;
             }
           }
+
           //&_text
           &_text {
             padding-left: 25px;
+
             h5 {
               font-family: $one_family;
               color: $primary_color;
@@ -4042,6 +4455,7 @@ body {
               text-transform: capitalize;
               font-size: 21px;
             }
+
             h6 {
               padding-top: 10px;
               font-family: $three_family;
@@ -4053,6 +4467,7 @@ body {
           }
         }
       }
+
       //X_Large
       @include x_large {
         //&_item
@@ -4067,6 +4482,7 @@ body {
         //&_item
         &_item {
           padding: 20px 30px;
+
           p {
             font-size: 20px;
           }
@@ -4078,24 +4494,30 @@ body {
         //&_item
         &_item {
           text-align: center;
+
           p {
             font-size: $xlarge_size;
+
             &::before {
               top: -20px;
               left: -20px;
               font-size: 90px;
             }
           }
+
           //client_desc
           .client_desc {
             display: flex;
             flex-direction: column;
             align-items: center;
+
             &_text {
               padding: 10px 0 0 0;
+
               h5 {
                 font-size: $xlarge_size;
               }
+
               h6 {
                 padding-top: 7px;
               }
@@ -4108,20 +4530,24 @@ body {
         //&_item
         &_item {
           padding: 20px 10px;
+
           p {
             font-size: $large_size;
+
             &::before {
               top: -10px;
               left: -10px;
               font-size: 70px;
             }
           }
+
           //client_desc
           .client_desc {
             &_text {
               h5 {
                 font-size: $large_size;
               }
+
               h6 {
                 padding-top: 5px;
                 font-size: $regular_size;
@@ -4135,21 +4561,25 @@ body {
         //&_item
         &_item {
           padding: 20px 10px;
+
           p {
             font-size: $regular_size;
             line-height: 18px;
+
             &::before {
               top: 0px;
               left: 0px;
               font-size: 50px;
             }
           }
+
           //client_desc
           .client_desc {
             &_text {
               h5 {
                 font-size: $regular_size;
               }
+
               h6 {
                 padding-top: 5px;
                 font-size: $small_size;
@@ -4174,9 +4604,11 @@ body {
     //&_item
     &_item {
       margin-bottom: 100px;
+
       &:last-child {
         margin-bottom: 0;
       }
+
       h1 {
         font-family: $one_family;
         color: $primary_color;
@@ -4212,11 +4644,13 @@ body {
       //&_box
       &_box {
         width: 100%;
+
         .heading {
           border: 1px solid $six_color;
           padding: 25px 45px;
           position: relative;
           cursor: pointer;
+
           i {
             position: absolute;
             top: 35px;
@@ -4224,9 +4658,11 @@ body {
             color: $primary_color;
             font-weight: bold;
           }
+
           .fa-chevron-up.open {
             color: $two_color;
           }
+
           h3 {
             font-family: $one_family;
             font-size: 21px;
@@ -4234,6 +4670,7 @@ body {
             line-height: normal;
           }
         }
+
         .content {
           border: 1px solid $six_color;
           background-color: $five_color;
@@ -4250,10 +4687,12 @@ body {
           //heading
           .heading {
             padding: 15px 25px;
+
             i {
               top: 20px;
               right: 20px;
             }
+
             h3 {
               font-size: $xlarge_size;
             }
@@ -4270,6 +4709,7 @@ body {
           //heading
           .heading {
             padding: 15px 20px;
+
             h3 {
               font-size: $large_size;
             }
@@ -4297,24 +4737,302 @@ body {
 
 /////PRİCİNGS
 
+//Pricings#
+#pricings {
+  width: 100%;
+  padding: 100px 0 100px 0;
+
+  //pricings
+  .pricings {
+    //&_one
+    &_one {
+      //&_box
+      &_box {
+        border: 1px solid $six_color;
+        background-color: $base_color;
+        padding: 35px;
+        transition: 0.3s all ease-in-out;
+
+        h4 {
+          position: relative;
+          top: -60px;
+          left: 0;
+          width: 100%;
+          height: 45px;
+          line-height: 45px;
+          text-align: center;
+          background-color: $eight_color;
+          color: $primary_color;
+          font-family: $three_family;
+          text-transform: capitalize;
+          font-size: $large_size;
+        }
+
+        h5 {
+          font-family: $three_family;
+          color: $three_color;
+          text-transform: capitalize;
+          font-size: $large_size;
+          line-height: normal;
+        }
+
+        h6 {
+          padding-top: 10px;
+          font-family: $one_family;
+          color: $primary_color;
+          font-weight: 900;
+          text-transform: capitalize;
+          font-size: 35px;
+          line-height: normal;
+        }
+
+        p {
+          padding-top: 10px;
+          font-family: $three_family;
+          font-size: $large_size;
+          font-style: italic;
+          line-height: normal;
+          color: $three_color;
+        }
+
+        //ul
+        ul {
+          padding-top: 50px;
+          text-align: left;
+
+          li {
+            display: block;
+            position: relative;
+            padding: 0 0 20px 30px;
+
+            &:last-child {
+              padding: 0 0 0 30px;
+            }
+
+            a {
+              font-family: $three_family;
+              font-size: $large_size;
+              font-weight: 400;
+              color: $three_color;
+              transition: 0.3s all ease-in-out;
+
+              &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '\f058';
+                font-family: 'Font Awesome 6 Free';
+                font-weight: 900;
+                color: $two_color;
+              }
+
+              &:hover {
+                color: $two_color;
+              }
+            }
+          }
+        }
+
+        .read_more {
+          display: inline-block;
+          margin-top: 70px;
+          width: 100%;
+          height: 55px;
+          text-align: center;
+          background-color: $two_color;
+          color: $base_color;
+          font-family: $three_family;
+          text-transform: capitalize;
+          font-size: $large_size;
+          line-height: 55px;
+        }
+
+        &:hover {
+          background-color: $two_color;
+
+          h5,
+          h6,
+          p {
+            color: $base_color;
+          }
+
+          ul {
+            li {
+              a {
+                color: $base_color;
+
+                &::before {
+                  color: $base_color;
+                }
+              }
+            }
+          }
+
+          .read_more {
+            background-color: $primary_color;
+          }
+        }
+      }
+
+      //Large
+      @include large {
+        //&_box
+        &_box {
+          padding: 30px;
+
+          h4 {
+            top: -50px;
+          }
+
+          h6 {
+            font-size: 30px;
+          }
+        }
+      }
+      //Notebook
+      @include notebook {
+        //&_box
+        &_box {
+          margin-bottom: 30px;
+          padding: 25px;
+
+          h4 {
+            top: -40px;
+            height: 35px;
+            line-height: 35px;
+            font-size: $regular_size;
+          }
+
+          h5 {
+            font-size: $regular_size;
+          }
+
+          h6 {
+            font-size: 25px;
+          }
+
+          p {
+            font-size: $regular_size;
+          }
+
+          ul {
+            li {
+              padding: 0 0 15px 25px;
+
+              &:last-child {
+                padding: 0 0 0 25px;
+              }
+
+              a {
+                font-size: $regular_size;
+
+                &::before {
+                  top: 1px;
+                }
+              }
+            }
+          }
+
+          .read_more {
+            margin-top: 50px;
+            height: 45px;
+            line-height: 45px;
+            font-size: $regular_size;
+          }
+        }
+      }
+      //XTablet
+      @include x_tablet {
+        //&_box
+        &_box {
+          padding: 20px;
+
+          h4 {
+            top: 0px;
+            height: 30px;
+            line-height: 30px;
+          }
+
+          h5 {
+            padding-top: 15px;
+          }
+
+          h6 {
+            font-size: 20px;
+          }
+
+          .read_more {
+            height: 35px;
+            line-height: 35px;
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        //&_box
+        &_box {
+          padding: 15px;
+
+          h4 {
+            top: 0px;
+            height: 30px;
+            line-height: 30px;
+            font-size: $small_size;
+          }
+
+          h5 {
+            padding-top: 15px;
+            font-size: $small_size;
+          }
+
+          h6 {
+            font-size: $xlarge_size;
+          }
+
+          p {
+            font-size: $small_size;
+          }
+
+          .read_more {
+            height: 30px;
+            line-height: 30px;
+            font-size: $small_size;
+          }
+        }
+      }
+    }
+
+    //&_two
+    &_two {
+    }
+
+    //&_three
+    &_three {
+    }
+  }
+}
+
 /////TEAMS
 
 //Teams#
 #teams {
   width: 100%;
-  padding: 100px 0 70px 0;
+  padding: 100px 0 50px 0;
 
   //teams
   .teams {
     //&_item
     &_item {
-      margin-bottom: 30px;
+      margin-bottom: 50px;
+
       &:last-child {
         margin-bottom: 0;
       }
+
       img {
         width: 100%;
       }
+
       h5 {
         padding-top: 15px;
         font-family: $one_family;
@@ -4324,6 +5042,7 @@ body {
         color: $primary_color;
         line-height: normal;
       }
+
       h6 {
         padding-top: 12px;
         font-family: $three_family;
@@ -4332,6 +5051,7 @@ body {
         font-size: $large_size;
         line-height: normal;
       }
+
       .read_more {
         display: inline-block;
         padding-top: 25px;
@@ -4384,14 +5104,18 @@ body {
     //&_item
     &_item {
       margin-bottom: 30px;
+
       &:last-child {
         margin-bottom: 0;
       }
+
       img {
         width: 100%;
       }
+
       h6 {
         padding-top: 15px;
+
         a {
           font-family: $one_family;
           font-weight: 900;
@@ -4401,6 +5125,7 @@ body {
           line-height: normal;
         }
       }
+
       p {
         padding-top: 15px;
         font-family: $three_family;
@@ -4408,6 +5133,7 @@ body {
         font-size: $large_size;
         line-height: 22px;
       }
+
       .read_more {
         display: inline-block;
         padding-top: 25px;
@@ -4476,6 +5202,7 @@ body {
         width: 100%;
       }
     }
+
     //&_text
     &_text {
       h6 {
@@ -4486,6 +5213,7 @@ body {
         color: $primary_color;
         line-height: normal;
       }
+
       p {
         padding-top: 20px;
         font-family: $three_family;
@@ -4500,6 +5228,7 @@ body {
       //&_text
       &_text {
         padding-top: 25px;
+
         h6 {
           font-size: $xlarge_size;
         }
@@ -4512,6 +5241,7 @@ body {
         h6 {
           font-size: $large_size;
         }
+
         p {
           padding-top: 18px;
           font-size: $regular_size;
@@ -4526,6 +5256,7 @@ body {
         h6 {
           font-size: $regular_size;
         }
+
         p {
           font-size: $small_size;
           line-height: 16px;
@@ -4545,16 +5276,19 @@ body {
     //&_heading
     &_heading {
       text-align: center;
+
       h6 {
         font-family: $one_family;
         font-weight: 900;
         line-height: normal;
         font-size: 35px;
         text-transform: capitalize;
+
         span {
           color: $two_color;
         }
       }
+
       //Notebook
       @include notebook {
         h6 {
@@ -4589,8 +5323,10 @@ body {
         img {
           width: 100%;
         }
+
         h6 {
           padding-top: 15px;
+
           a {
             font-family: $one_family;
             font-weight: 900;
@@ -4600,6 +5336,7 @@ body {
             line-height: normal;
           }
         }
+
         p {
           padding-top: 15px;
           font-family: $three_family;
@@ -4607,6 +5344,7 @@ body {
           font-size: $large_size;
           line-height: 22px;
         }
+
         .read_more {
           display: inline-block;
           padding-top: 25px;
@@ -4616,6 +5354,7 @@ body {
           line-height: normal;
           color: $two_color;
         }
+
         //Notebook
         @include notebook {
           h6 {
@@ -4688,9 +5427,11 @@ body {
   //text
   .text {
     text-align: center;
+
     .head {
       position: relative;
       top: -140px;
+
       h6 {
         font-family: $one_family;
         font-weight: 900;
@@ -4698,6 +5439,7 @@ body {
         font-size: 35px;
         line-height: normal;
       }
+
       p {
         padding-top: 15px;
         font-family: $three_family;
@@ -4705,6 +5447,7 @@ body {
         font-size: $large_size;
         line-height: normal;
       }
+
       .read_more {
         margin-top: 70px;
         display: inline-block;

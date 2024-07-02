@@ -4,15 +4,20 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "sass": "node-sass -w src/styles/ -o src/styles/ --recursive --output-style compressed",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "next": "14.2.3",
+    "node-sass": "^9.0.0",
     "react": "^18",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
     "swiper": "^11.1.4"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.1"
   }
 }
