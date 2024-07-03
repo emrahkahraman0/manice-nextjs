@@ -4737,277 +4737,809 @@ body {
 
 /////PRİCİNGS
 
-//Pricings#
-#pricings {
+//Pricings_One#
+#pricings_one {
   width: 100%;
   padding: 100px 0 100px 0;
 
-  //pricings
-  .pricings {
-    //&_one
-    &_one {
-      //&_box
-      &_box {
-        border: 1px solid $six_color;
-        background-color: $base_color;
-        padding: 35px;
-        transition: 0.3s all ease-in-out;
+  //pricings_one
+  .pricings_one {
+    //&_box
+    &_box {
+      border: 1px solid $six_color;
+      background-color: $base_color;
+      padding: 35px;
+      transition: 0.3s all ease-in-out;
 
-        h4 {
+      h4 {
+        position: relative;
+        top: -60px;
+        left: 0;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        background-color: $eight_color;
+        color: $primary_color;
+        font-family: $three_family;
+        text-transform: uppercase;
+        @include weight(500);
+        font-size: $large_size;
+      }
+
+      h5 {
+        font-family: $three_family;
+        color: $three_color;
+        text-transform: capitalize;
+        font-size: $large_size;
+        line-height: normal;
+      }
+
+      h6 {
+        padding-top: 10px;
+        font-family: $one_family;
+        color: $primary_color;
+        font-weight: 900;
+        text-transform: capitalize;
+        font-size: 35px;
+        line-height: normal;
+      }
+
+      p {
+        padding-top: 10px;
+        font-family: $three_family;
+        font-size: $large_size;
+        font-style: italic;
+        line-height: normal;
+        color: $three_color;
+      }
+
+      //ul
+      ul {
+        padding-top: 50px;
+        text-align: left;
+
+        li {
+          display: block;
           position: relative;
-          top: -60px;
-          left: 0;
-          width: 100%;
-          height: 45px;
-          line-height: 45px;
-          text-align: center;
-          background-color: $eight_color;
-          color: $primary_color;
-          font-family: $three_family;
-          text-transform: capitalize;
-          font-size: $large_size;
-        }
+          padding: 0 0 20px 30px;
 
-        h5 {
-          font-family: $three_family;
-          color: $three_color;
-          text-transform: capitalize;
-          font-size: $large_size;
-          line-height: normal;
-        }
+          &:last-child {
+            padding: 0 0 0 30px;
+          }
 
-        h6 {
-          padding-top: 10px;
-          font-family: $one_family;
-          color: $primary_color;
-          font-weight: 900;
-          text-transform: capitalize;
-          font-size: 35px;
-          line-height: normal;
-        }
+          a {
+            font-family: $three_family;
+            font-size: $large_size;
+            font-weight: 400;
+            color: $three_color;
+            transition: 0.3s all ease-in-out;
 
-        p {
-          padding-top: 10px;
-          font-family: $three_family;
-          font-size: $large_size;
-          font-style: italic;
-          line-height: normal;
-          color: $three_color;
-        }
-
-        //ul
-        ul {
-          padding-top: 50px;
-          text-align: left;
-
-          li {
-            display: block;
-            position: relative;
-            padding: 0 0 20px 30px;
-
-            &:last-child {
-              padding: 0 0 0 30px;
+            &::before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              content: '\f058';
+              font-family: 'Font Awesome 6 Free';
+              font-weight: 900;
+              color: $two_color;
             }
 
+            &:hover {
+              color: $two_color;
+            }
+          }
+        }
+      }
+
+      .read_more {
+        display: inline-block;
+        margin-top: 70px;
+        width: 100%;
+        height: 55px;
+        text-align: center;
+        background-color: $two_color;
+        color: $base_color;
+        font-family: $three_family;
+        text-transform: capitalize;
+        font-size: $large_size;
+        line-height: 55px;
+      }
+
+      &:hover {
+        background-color: $two_color;
+
+        h5,
+        h6,
+        p {
+          color: $base_color;
+        }
+
+        ul {
+          li {
             a {
-              font-family: $three_family;
-              font-size: $large_size;
-              font-weight: 400;
-              color: $three_color;
-              transition: 0.3s all ease-in-out;
+              color: $base_color;
 
               &::before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: '\f058';
-                font-family: 'Font Awesome 6 Free';
-                font-weight: 900;
-                color: $two_color;
-              }
-
-              &:hover {
-                color: $two_color;
+                color: $base_color;
               }
             }
           }
         }
 
         .read_more {
-          display: inline-block;
-          margin-top: 70px;
-          width: 100%;
-          height: 55px;
-          text-align: center;
-          background-color: $two_color;
-          color: $base_color;
-          font-family: $three_family;
-          text-transform: capitalize;
-          font-size: $large_size;
-          line-height: 55px;
-        }
-
-        &:hover {
-          background-color: $two_color;
-
-          h5,
-          h6,
-          p {
-            color: $base_color;
-          }
-
-          ul {
-            li {
-              a {
-                color: $base_color;
-
-                &::before {
-                  color: $base_color;
-                }
-              }
-            }
-          }
-
-          .read_more {
-            background-color: $primary_color;
-          }
+          background-color: $primary_color;
         }
       }
 
       //Large
       @include large {
-        //&_box
-        &_box {
-          padding: 30px;
+        padding: 30px;
 
-          h4 {
-            top: -50px;
-          }
+        h4 {
+          top: -50px;
+        }
 
-          h6 {
-            font-size: 30px;
-          }
+        h6 {
+          font-size: 30px;
         }
       }
       //Notebook
       @include notebook {
-        //&_box
-        &_box {
-          margin-bottom: 30px;
-          padding: 25px;
+        margin-bottom: 30px;
+        padding: 25px;
 
-          h4 {
-            top: -40px;
-            height: 35px;
-            line-height: 35px;
-            font-size: $regular_size;
-          }
+        h4 {
+          top: -40px;
+          height: 35px;
+          line-height: 35px;
+          font-size: $regular_size;
+        }
 
-          h5 {
-            font-size: $regular_size;
-          }
+        h5 {
+          font-size: $regular_size;
+        }
 
-          h6 {
-            font-size: 25px;
-          }
+        h6 {
+          font-size: 25px;
+        }
 
-          p {
-            font-size: $regular_size;
-          }
+        p {
+          font-size: $regular_size;
+        }
 
-          ul {
-            li {
-              padding: 0 0 15px 25px;
+        ul {
+          li {
+            padding: 0 0 15px 25px;
 
-              &:last-child {
-                padding: 0 0 0 25px;
-              }
+            &:last-child {
+              padding: 0 0 0 25px;
+            }
 
-              a {
-                font-size: $regular_size;
+            a {
+              font-size: $regular_size;
 
-                &::before {
-                  top: 1px;
-                }
+              &::before {
+                top: 1px;
               }
             }
           }
+        }
 
-          .read_more {
-            margin-top: 50px;
-            height: 45px;
-            line-height: 45px;
-            font-size: $regular_size;
-          }
+        .read_more {
+          margin-top: 50px;
+          height: 45px;
+          line-height: 45px;
+          font-size: $regular_size;
         }
       }
-      //XTablet
+      //X_Tablet
       @include x_tablet {
-        //&_box
-        &_box {
-          padding: 20px;
+        padding: 20px;
 
-          h4 {
-            top: 0px;
-            height: 30px;
-            line-height: 30px;
-          }
+        h4 {
+          top: 0px;
+          height: 30px;
+          line-height: 30px;
+        }
 
-          h5 {
-            padding-top: 15px;
-          }
+        h5 {
+          padding-top: 15px;
+        }
 
-          h6 {
-            font-size: 20px;
-          }
+        h6 {
+          font-size: 20px;
+        }
 
-          .read_more {
-            height: 35px;
-            line-height: 35px;
-          }
+        .read_more {
+          height: 35px;
+          line-height: 35px;
         }
       }
       //Mobil
       @include mobil {
-        //&_box
-        &_box {
-          padding: 15px;
+        padding: 15px;
 
-          h4 {
-            top: 0px;
-            height: 30px;
-            line-height: 30px;
-            font-size: $small_size;
-          }
+        h4 {
+          top: 0px;
+          height: 30px;
+          line-height: 30px;
+          font-size: $small_size;
+        }
 
-          h5 {
-            padding-top: 15px;
-            font-size: $small_size;
-          }
+        h5 {
+          padding-top: 15px;
+          font-size: $small_size;
+        }
 
-          h6 {
-            font-size: $xlarge_size;
-          }
+        h6 {
+          font-size: $xlarge_size;
+        }
 
-          p {
-            font-size: $small_size;
-          }
+        p {
+          font-size: $small_size;
+        }
 
-          .read_more {
-            height: 30px;
-            line-height: 30px;
-            font-size: $small_size;
-          }
+        .read_more {
+          height: 30px;
+          line-height: 30px;
+          font-size: $small_size;
         }
       }
     }
+  }
+}
+//Pricings_Two#
+#pricings_two {
+  width: 100%;
+  padding: 100px 0 100px 0;
 
-    //&_two
-    &_two {
+  h3 {
+    margin-bottom: 60px;
+    text-align: center;
+    font-family: $one_family;
+    @include weight(black);
+    text-transform: capitalize;
+    font-size: 35px;
+    color: $primary_color;
+    line-height: normal;
+
+    //Tablet
+    @include tablet {
+      font-size: 25px;
     }
+    //X_Tablet
+    @include x_tablet {
+      font-size: 20px;
+      margin-bottom: 50px;
+    }
+    //Mobil
+    @include mobil {
+      font-size: $xlarge_size;
+      margin-bottom: 40px;
+    }
+  }
 
-    //&_three
-    &_three {
+  //pricings_two
+  .pricings_two {
+    //&_box
+    &_box {
+      border: 1px solid $six_color;
+      background-color: $base_color;
+      padding: 35px;
+      transition: 0.3s all ease-in-out;
+
+      h4 {
+        position: relative;
+        top: -60px;
+        left: 0;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        background-color: $eight_color;
+        color: $primary_color;
+        font-family: $three_family;
+        text-transform: capitalize;
+        font-size: $large_size;
+      }
+
+      h5 {
+        font-family: $three_family;
+        color: $three_color;
+        text-transform: capitalize;
+        font-size: $large_size;
+        line-height: normal;
+      }
+
+      h6 {
+        padding-top: 10px;
+        font-family: $one_family;
+        color: $primary_color;
+        font-weight: 900;
+        text-transform: capitalize;
+        font-size: 35px;
+        line-height: normal;
+      }
+
+      p {
+        padding-top: 10px;
+        font-family: $three_family;
+        font-size: $large_size;
+        font-style: italic;
+        line-height: normal;
+        color: $three_color;
+      }
+
+      //ul
+      ul {
+        padding-top: 50px;
+        text-align: left;
+
+        li {
+          display: block;
+          position: relative;
+          padding: 0 0 20px 30px;
+
+          &:last-child {
+            padding: 0 0 0 30px;
+          }
+
+          a {
+            font-family: $three_family;
+            font-size: $large_size;
+            font-weight: 400;
+            color: $three_color;
+            transition: 0.3s all ease-in-out;
+
+            &::before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              content: '\f058';
+              font-family: 'Font Awesome 6 Free';
+              font-weight: 900;
+              color: $two_color;
+            }
+
+            &:hover {
+              color: $two_color;
+            }
+          }
+        }
+      }
+
+      .read_more {
+        display: inline-block;
+        margin-top: 70px;
+        width: 100%;
+        height: 55px;
+        text-align: center;
+        background-color: $two_color;
+        color: $base_color;
+        font-family: $three_family;
+        text-transform: capitalize;
+        font-size: $large_size;
+        line-height: 55px;
+      }
+
+      &:hover {
+        background-color: $two_color;
+
+        h5,
+        h6,
+        p {
+          color: $base_color;
+        }
+
+        ul {
+          li {
+            a {
+              color: $base_color;
+
+              &::before {
+                color: $base_color;
+              }
+            }
+          }
+        }
+
+        .read_more {
+          background-color: $primary_color;
+        }
+      }
+
+      //Large
+      @include large {
+        padding: 30px;
+
+        h4 {
+          top: -50px;
+        }
+
+        h6 {
+          font-size: 30px;
+        }
+      }
+      //Notebook
+      @include notebook {
+        margin-bottom: 30px;
+        padding: 25px;
+
+        h4 {
+          top: -40px;
+          height: 35px;
+          line-height: 35px;
+          font-size: $regular_size;
+        }
+
+        h5 {
+          font-size: $regular_size;
+        }
+
+        h6 {
+          font-size: 25px;
+        }
+
+        p {
+          font-size: $regular_size;
+        }
+
+        ul {
+          li {
+            padding: 0 0 15px 25px;
+
+            &:last-child {
+              padding: 0 0 0 25px;
+            }
+
+            a {
+              font-size: $regular_size;
+
+              &::before {
+                top: 1px;
+              }
+            }
+          }
+        }
+
+        .read_more {
+          margin-top: 50px;
+          height: 45px;
+          line-height: 45px;
+          font-size: $regular_size;
+        }
+      }
+      //X_Tablet
+      @include x_tablet {
+        padding: 20px;
+
+        h4 {
+          top: 0px;
+          height: 30px;
+          line-height: 30px;
+        }
+
+        h5 {
+          padding-top: 15px;
+        }
+
+        h6 {
+          font-size: 20px;
+        }
+
+        .read_more {
+          height: 35px;
+          line-height: 35px;
+        }
+      }
+      //Mobil
+      @include mobil {
+        padding: 15px;
+
+        h4 {
+          top: 0px;
+          height: 30px;
+          line-height: 30px;
+          font-size: $small_size;
+        }
+
+        h5 {
+          padding-top: 15px;
+          font-size: $small_size;
+        }
+
+        h6 {
+          font-size: $xlarge_size;
+        }
+
+        p {
+          font-size: $small_size;
+        }
+
+        .read_more {
+          height: 30px;
+          line-height: 30px;
+          font-size: $small_size;
+        }
+      }
+    }
+  }
+}
+//Pricings_Three#
+#pricings_three {
+  width: 100%;
+  padding: 100px 0 100px 0;
+
+  h3 {
+    margin-bottom: 60px;
+    text-align: center;
+    font-family: $one_family;
+    @include weight(black);
+    text-transform: capitalize;
+    font-size: 35px;
+    color: $primary_color;
+    line-height: normal;
+
+    //Tablet
+    @include tablet {
+      font-size: 25px;
+    }
+    //X_Tablet
+    @include x_tablet {
+      font-size: 20px;
+      margin-bottom: 50px;
+    }
+    //Mobil
+    @include mobil {
+      font-size: $xlarge_size;
+      margin-bottom: 40px;
+    }
+  }
+
+  //pricings_three
+  .pricings_three {
+    //&_box
+    &_box {
+      border: 1px solid $six_color;
+      background-color: $base_color;
+      padding: 35px;
+      transition: 0.3s all ease-in-out;
+
+      h4 {
+        position: relative;
+        top: -60px;
+        left: 0;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        background-color: $eight_color;
+        color: $primary_color;
+        font-family: $three_family;
+        text-transform: capitalize;
+        font-size: $large_size;
+      }
+
+      h5 {
+        font-family: $three_family;
+        color: $three_color;
+        text-transform: capitalize;
+        font-size: $large_size;
+        line-height: normal;
+      }
+
+      h6 {
+        padding-top: 10px;
+        font-family: $one_family;
+        color: $primary_color;
+        font-weight: 900;
+        text-transform: capitalize;
+        font-size: 35px;
+        line-height: normal;
+      }
+
+      p {
+        padding-top: 10px;
+        font-family: $three_family;
+        font-size: $large_size;
+        font-style: italic;
+        line-height: normal;
+        color: $three_color;
+      }
+
+      //ul
+      ul {
+        padding-top: 50px;
+        text-align: left;
+
+        li {
+          display: block;
+          position: relative;
+          padding: 0 0 20px 30px;
+
+          &:last-child {
+            padding: 0 0 0 30px;
+          }
+
+          a {
+            font-family: $three_family;
+            font-size: $large_size;
+            font-weight: 400;
+            color: $three_color;
+            transition: 0.3s all ease-in-out;
+
+            &::before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              content: '\f058';
+              font-family: 'Font Awesome 6 Free';
+              font-weight: 900;
+              color: $two_color;
+            }
+
+            &:hover {
+              color: $two_color;
+            }
+          }
+        }
+      }
+
+      .read_more {
+        display: inline-block;
+        margin-top: 70px;
+        width: 100%;
+        height: 55px;
+        text-align: center;
+        background-color: $two_color;
+        color: $base_color;
+        font-family: $three_family;
+        text-transform: capitalize;
+        font-size: $large_size;
+        line-height: 55px;
+      }
+
+      &:hover {
+        background-color: $two_color;
+
+        h5,
+        h6,
+        p {
+          color: $base_color;
+        }
+
+        ul {
+          li {
+            a {
+              color: $base_color;
+
+              &::before {
+                color: $base_color;
+              }
+            }
+          }
+        }
+
+        .read_more {
+          background-color: $primary_color;
+        }
+      }
+
+      //Large
+      @include large {
+        padding: 30px;
+
+        h4 {
+          top: -50px;
+        }
+
+        h6 {
+          font-size: 30px;
+        }
+      }
+      //Notebook
+      @include notebook {
+        margin-bottom: 30px;
+        padding: 25px;
+
+        h4 {
+          top: -40px;
+          height: 35px;
+          line-height: 35px;
+          font-size: $regular_size;
+        }
+
+        h5 {
+          font-size: $regular_size;
+        }
+
+        h6 {
+          font-size: 25px;
+        }
+
+        p {
+          font-size: $regular_size;
+        }
+
+        ul {
+          li {
+            padding: 0 0 15px 25px;
+
+            &:last-child {
+              padding: 0 0 0 25px;
+            }
+
+            a {
+              font-size: $regular_size;
+
+              &::before {
+                top: 1px;
+              }
+            }
+          }
+        }
+
+        .read_more {
+          margin-top: 50px;
+          height: 45px;
+          line-height: 45px;
+          font-size: $regular_size;
+        }
+      }
+      //X_Tablet
+      @include x_tablet {
+        padding: 20px;
+
+        h4 {
+          top: 0px;
+          height: 30px;
+          line-height: 30px;
+        }
+
+        h5 {
+          padding-top: 15px;
+        }
+
+        h6 {
+          font-size: 20px;
+        }
+
+        .read_more {
+          height: 35px;
+          line-height: 35px;
+        }
+      }
+      //Mobil
+      @include mobil {
+        padding: 15px;
+
+        h4 {
+          top: 0px;
+          height: 30px;
+          line-height: 30px;
+          font-size: $small_size;
+        }
+
+        h5 {
+          padding-top: 15px;
+          font-size: $small_size;
+        }
+
+        h6 {
+          font-size: $xlarge_size;
+        }
+
+        p {
+          font-size: $small_size;
+        }
+
+        .read_more {
+          height: 30px;
+          line-height: 30px;
+          font-size: $small_size;
+        }
+      }
     }
   }
 }

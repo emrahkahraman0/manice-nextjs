@@ -1,8 +1,9 @@
-import AboutServices from "@/templates/AboutServices";
-import AboutTeams from "@/templates/AboutTeams";
-import AboutValue from "@/templates/AboutValue";
-import Aboutİnfo from "@/templates/Aboutİnfo";
-import Page from "@/templates/Page";
+import AboutServices from '@/templates/AboutServices'
+import AboutTeams from '@/templates/AboutTeams'
+import AboutValue from '@/templates/AboutValue'
+import Aboutİnfo from '@/templates/Aboutİnfo'
+import HomeBrands from '@/templates/HomeBrands'
+import Page from '@/templates/Page'
 
 function About() {
   return (
@@ -12,8 +13,9 @@ function About() {
       <AboutServices />
       <AboutValue />
       <AboutTeams />
+      <HomeBrands />
     </>
-  );
+  )
 }
 
-export default About;
+export default About
