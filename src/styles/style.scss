@@ -5567,12 +5567,14 @@ body {
 
       h5 {
         padding-top: 15px;
-        font-family: $one_family;
-        font-weight: 900;
-        text-transform: capitalize;
-        font-size: $xlarge_size;
-        color: $primary_color;
         line-height: normal;
+        a {
+          font-family: $one_family;
+          font-weight: 900;
+          text-transform: capitalize;
+          font-size: $xlarge_size;
+          color: $primary_color;
+        }
       }
 
       h6 {
@@ -5597,7 +5599,9 @@ body {
       //Tablet
       @include tablet {
         h5 {
-          font-size: $large_size;
+          a {
+            font-size: $large_size;
+          }
         }
         h6 {
           font-size: $regular_size;
@@ -5610,7 +5614,9 @@ body {
       //Mobil
       @include mobil {
         h5 {
-          font-size: $regular_size;
+          a {
+            font-size: $regular_size;
+          }
         }
         h6 {
           font-size: $small_size;

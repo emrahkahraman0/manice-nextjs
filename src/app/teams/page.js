@@ -12,45 +12,11 @@ function Teams() {
           <div class="teams row row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-2">
             <div class="teams_item">
               <Image className="img_fluid" src={TeamImg} alt="Team Image" />
-              <h5>Team One</h5>
-              <h6>Team Job</h6>
-              <Link className="read_more" href="/">
-                Read More
-              </Link>
-            </div>
-            {/*teams_item*/}
-            <div class="teams_item">
-              <Image className="img_fluid" src={TeamImg} alt="Team Image" />
-              <h5>Team Two</h5>
-              <h6>Team Job</h6>
-              <Link className="read_more" href="/">
-                Read More
-              </Link>
-            </div>
-            {/*teams_item*/}
-            <div class="teams_item">
-              <Image className="img_fluid" src={TeamImg} alt="Team Image" />
-              <h5>Team Three</h5>
-              <h6>Team Job</h6>
-              <Link className="read_more" href="/">
-                Read More
-              </Link>
-            </div>
-            {/*teams_item*/}
-            <div class="teams_item">
-              <Image className="img_fluid" src={TeamImg} alt="Team Image" />
-              <h5>Team Four</h5>
-              <h6>Team Job</h6>
-              <Link className="read_more" href="/">
-                Read More
-              </Link>
-            </div>
-            {/*teams_item*/}
-            <div class="teams_item">
-              <Image className="img_fluid" src={TeamImg} alt="Team Image" />
-              <h5>Team Five</h5>
-              <h6>Team Job</h6>
-              <Link className="read_more" href="/">
+              <h5>
+                <Link href="/teams/">Team Name</Link>
+              </h5>
+              <h6>Team Name</h6>
+              <Link className="read_more" href="/teams/">
                 Read More
               </Link>
             </div>
