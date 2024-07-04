@@ -3,7 +3,7 @@ import Image from 'next/image'
 import TeamImg from '/public/250x250.png'
 import Link from 'next/link'
 
-function Teams() {
+function Teams({ slug }) {
   return (
     <>
       <Page />
@@ -13,10 +13,10 @@ function Teams() {
             <div class="teams_item">
               <Image className="img_fluid" src={TeamImg} alt="Team Image" />
               <h5>
-                <Link href="/teams/">Team Name</Link>
+                <Link href={`/teams/${slug}`}>Team Name</Link>
               </h5>
-              <h6>Team Name</h6>
-              <Link className="read_more" href="/teams/">
+              <h6>Team Job</h6>
+              <Link className="read_more" href={`/teams/${slug}`}>
                 Read More
               </Link>
             </div>

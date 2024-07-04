@@ -1,15 +1,15 @@
-"use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+'use client'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination } from 'swiper/modules'
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-import Link from "next/link";
-import Image from "next/image";
-import ProjectImg from "/public/300x300.png";
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/autoplay'
+import Link from 'next/link'
+import Image from 'next/image'
+import ProjectImg from '/public/300x300.png'
 
-function RecentProjects() {
+function RecentProjects({ slug }) {
   return (
     <>
       <div id="recent_projects">
@@ -31,30 +31,30 @@ function RecentProjects() {
               autoplay={{
                 delay: 2500,
                 pauseOnMouseEnter: true,
-                disableOnInteraction: false,
+                disableOnInteraction: false
               }}
               breakpoints={{
                 0: {
-                  slidesPerView: 1,
+                  slidesPerView: 1
                 },
                 480: {
-                  slidesPerView: 1,
+                  slidesPerView: 1
                 },
                 575: {
-                  slidesPerView: 2,
+                  slidesPerView: 2
                 },
                 768: {
-                  slidesPerView: 2,
+                  slidesPerView: 2
                 },
                 992: {
-                  slidesPerView: 3,
+                  slidesPerView: 3
                 },
                 1200: {
-                  slidesPerView: 3,
+                  slidesPerView: 3
                 },
                 1400: {
-                  slidesPerView: 3,
-                },
+                  slidesPerView: 3
+                }
               }}
             >
               <SwiperSlide className="recent_projects_items_box">
@@ -64,13 +64,13 @@ function RecentProjects() {
                   alt="Project Image"
                 />
                 <h6>
-                  <Link href="/">Project Name One</Link>
+                  <Link href={`/projects/${slug}`}>Project Name One</Link>
                 </h6>
                 <p>
                   Duis aute irure dolor in reprehenderit in voluptate velit
                   essecillum dolore eu fugiat nulla pariatur.
                 </p>
-                <Link className="read_more" href="/">
+                <Link className="read_more" href={`/projects/${slug}`}>
                   Read More
                 </Link>
               </SwiperSlide>
@@ -82,13 +82,13 @@ function RecentProjects() {
                   alt="Project Image"
                 />
                 <h6>
-                  <Link href="/">Project Name One</Link>
+                  <Link href={`/projects/${slug}`}>Project Name One</Link>
                 </h6>
                 <p>
                   Duis aute irure dolor in reprehenderit in voluptate velit
                   essecillum dolore eu fugiat nulla pariatur.
                 </p>
-                <Link className="read_more" href="/">
+                <Link className="read_more" href={`/projects/${slug}`}>
                   Read More
                 </Link>
               </SwiperSlide>
@@ -100,13 +100,13 @@ function RecentProjects() {
                   alt="Project Image"
                 />
                 <h6>
-                  <Link href="/">Project Name One</Link>
+                  <Link href={`/projects/${slug}`}>Project Name One</Link>
                 </h6>
                 <p>
                   Duis aute irure dolor in reprehenderit in voluptate velit
                   essecillum dolore eu fugiat nulla pariatur.
                 </p>
-                <Link className="read_more" href="/">
+                <Link className="read_more" href={`/projects/${slug}`}>
                   Read More
                 </Link>
               </SwiperSlide>
@@ -118,13 +118,13 @@ function RecentProjects() {
                   alt="Project Image"
                 />
                 <h6>
-                  <Link href="/">Project Name One</Link>
+                  <Link href={`/projects/${slug}`}>Project Name One</Link>
                 </h6>
                 <p>
                   Duis aute irure dolor in reprehenderit in voluptate velit
                   essecillum dolore eu fugiat nulla pariatur.
                 </p>
-                <Link className="read_more" href="/">
+                <Link className="read_more" href={`/projects/${slug}`}>
                   Read More
                 </Link>
               </SwiperSlide>
@@ -138,7 +138,7 @@ function RecentProjects() {
       </div>
       {/*recent_projects#*/}
     </>
-  );
+  )
 }
 
-export default RecentProjects;
+export default RecentProjects

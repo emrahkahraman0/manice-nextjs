@@ -409,6 +409,19 @@ body {
   .header {
     height: 80px;
 
+    //Notebook
+    @include notebook {
+      //&_search
+      &_search {
+        &_open {
+          position: absolute;
+          top: 55%;
+          left: 65%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
     //X_Tablet
     @include x_tablet {
       //&_search
@@ -5630,6 +5643,78 @@ body {
   }
 }
 
+/////TEAMS-SİNGLE
+
+//Team_Details#
+#team_details {
+  width: 100%;
+  padding: 100px 0;
+
+  //team_details
+  .team_details {
+    //&_image
+    &_image {
+      img {
+        width: 100%;
+      }
+    }
+
+    //&_text
+    &_text {
+      h5 {
+        line-height: normal;
+        font-family: $one_family;
+        font-weight: 900;
+        text-transform: capitalize;
+        font-size: $xlarge_size;
+        color: $primary_color;
+      }
+
+      h6 {
+        padding-top: 12px;
+        font-family: $three_family;
+        color: $three_color;
+        text-transform: capitalize;
+        font-size: $large_size;
+        line-height: normal;
+      }
+    }
+
+    //Noeook
+    @include notebook {
+      text-align: center;
+      //&_text
+      &_text {
+        margin-top: 30px;
+      }
+    }
+    //Tablet
+    @include tablet {
+      //&_text
+      &_text {
+        h5 {
+          font-size: $large_size;
+        }
+        h6 {
+          font-size: $regular_size;
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_text
+      &_text {
+        h5 {
+          font-size: $regular_size;
+        }
+        h6 {
+          font-size: $small_size;
+        }
+      }
+    }
+  }
+}
+
 /////PROJECTS
 
 //Projects#
@@ -5809,6 +5894,7 @@ body {
   width: 100%;
   background-color: $five_color;
   padding: 100px 0;
+
   //recent_projects
   .recent_projects {
     //&_heading
@@ -5936,14 +6022,23 @@ body {
       }
     }
 
-    //swiper-pagination
-    .swiper-pagination {
-      //swiper-pagination-bullet
-      .swiper-pagination-bullet {
-        width: 50px;
-        height: 50px;
-        background-color: $two_color;
-        border-radius: 50%;
+    //swiper
+    .swiper {
+      position: relative;
+      //swiper-pagination
+      .swiper-pagination {
+        .swiper-pagination-bullets {
+          position: absolute;
+          bottom: 10px;
+          left: 0;
+        }
+        //swiper-pagination-bullet
+        .swiper-pagination-bullet {
+          width: 10px;
+          height: 10px;
+          background-color: $two_color;
+          border-radius: 50%;
+        }
       }
     }
   }

@@ -1,9 +1,9 @@
-import Page from "@/templates/Page";
-import Image from "next/image";
-import ProjectImg from "/public/300x300.png";
-import Link from "next/link";
+import Page from '@/templates/Page'
+import Image from 'next/image'
+import ProjectImg from '/public/300x300.png'
+import Link from 'next/link'
 
-function Projects() {
+function Projects({ slug }) {
   return (
     <>
       <Page />
@@ -17,13 +17,13 @@ function Projects() {
                 alt="Project Image"
               />
               <h6>
-                <Link href="/">Project Name One</Link>
+                <Link href={`/projects/${slug}`}>Project Name One</Link>
               </h6>
               <p>
                 Duis aute irure dolor in reprehenderit in voluptate velit
                 essecillum dolore eu fugiat nulla pariatur.
               </p>
-              <Link className="read_more" href="/">
+              <Link className="read_more" href={`/projects/${slug}`}>
                 Read More
               </Link>
             </div>
@@ -35,13 +35,13 @@ function Projects() {
                 alt="Project Image"
               />
               <h6>
-                <Link href="/">Project Name One</Link>
+                <Link href={`/projects/${slug}`}>Project Name One</Link>
               </h6>
               <p>
                 Duis aute irure dolor in reprehenderit in voluptate velit
                 essecillum dolore eu fugiat nulla pariatur.
               </p>
-              <Link className="read_more" href="/">
+              <Link className="read_more" href={`/projects/${slug}`}>
                 Read More
               </Link>
             </div>
@@ -53,13 +53,13 @@ function Projects() {
                 alt="Project Image"
               />
               <h6>
-                <Link href="/">Project Name One</Link>
+                <Link href={`/projects/${slug}`}>Project Name One</Link>
               </h6>
               <p>
                 Duis aute irure dolor in reprehenderit in voluptate velit
                 essecillum dolore eu fugiat nulla pariatur.
               </p>
-              <Link className="read_more" href="/">
+              <Link className="read_more" href={`/projects/${slug}`}>
                 Read More
               </Link>
             </div>
@@ -71,13 +71,13 @@ function Projects() {
                 alt="Project Image"
               />
               <h6>
-                <Link href="/">Project Name One</Link>
+                <Link href={`/projects/${slug}`}>Project Name One</Link>
               </h6>
               <p>
                 Duis aute irure dolor in reprehenderit in voluptate velit
                 essecillum dolore eu fugiat nulla pariatur.
               </p>
-              <Link className="read_more" href="/">
+              <Link className="read_more" href={`/projects/${slug}`}>
                 Read More
               </Link>
             </div>
@@ -89,13 +89,13 @@ function Projects() {
                 alt="Project Image"
               />
               <h6>
-                <Link href="/">Project Name One</Link>
+                <Link href={`/projects/${slug}`}>Project Name One</Link>
               </h6>
               <p>
                 Duis aute irure dolor in reprehenderit in voluptate velit
                 essecillum dolore eu fugiat nulla pariatur.
               </p>
-              <Link className="read_more" href="/">
+              <Link className="read_more" href={`/projects/${slug}`}>
                 Read More
               </Link>
             </div>
@@ -107,7 +107,7 @@ function Projects() {
       </div>
       {/*projects#*/}
     </>
-  );
+  )
 }
 
-export default Projects;
+export default Projects
