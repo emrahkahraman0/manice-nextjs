@@ -6046,6 +6046,253 @@ body {
 
 /////BLOG
 
+//Blog#
+#blog {
+  width: 100%;
+  padding: 100px 0 100px 0;
+
+  //blog
+  .blog {
+    //&_item
+    //&_item
+    &_item {
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      img {
+        width: 100%;
+      }
+
+      h6 {
+        padding-top: 25px;
+
+        a {
+          font-family: $one_family;
+          font-weight: 900;
+          line-height: 24px;
+          font-size: 21px;
+          color: $primary_color;
+        }
+      }
+
+      //blog_desc
+      .blog_desc {
+        padding-top: 30px;
+        display: flex;
+        font-family: $three_family;
+        color: $three_color;
+        font-size: $large_size;
+
+        .date {
+          border-right: 1px solid #e2e2e2;
+          padding-right: 15px;
+        }
+
+        .category {
+          padding-left: 15px;
+        }
+      }
+
+      p {
+        padding-top: 35px;
+        font-family: $three_family;
+        color: $three_color;
+        font-size: $large_size;
+        line-height: 21px;
+      }
+
+      .read_more {
+        display: inline-block;
+        margin-top: 20px;
+        font-family: $one_family;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: $two_color;
+        font-size: $large_size;
+      }
+    }
+
+    //Large
+    @include large {
+      padding-top: 65px;
+      //&_item
+      &_item {
+        h6 {
+          padding-top: 20px;
+
+          a {
+            font-size: $xlarge_size;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+    //Notebook
+    @include notebook {
+      //&_item
+      &_item {
+        h6 {
+          a {
+            font-size: $large_size;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+    //Tablet
+    @include tablet {
+      //&_item
+      &_item {
+        //blog_desc
+        .blog_desc {
+          padding-top: 25px;
+          font-size: $regular_size;
+
+          .date {
+            padding-right: 10px;
+          }
+
+          .category {
+            padding-left: 10px;
+          }
+        }
+
+        p {
+          padding-top: 25px;
+          font-size: $regular_size;
+          line-height: 19px;
+        }
+
+        .read_more {
+          font-size: $regular_size;
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_item
+      &_item {
+        h6 {
+          padding-top: 17px;
+
+          a {
+            font-size: $regular_size;
+            line-height: 18px;
+          }
+        }
+
+        //blog_desc
+        .blog_desc {
+          font-size: $small_size;
+        }
+
+        p {
+          font-size: $small_size;
+          line-height: 17px;
+        }
+
+        .read_more {
+          font-size: $small_size;
+        }
+      }
+    }
+  }
+
+  //pagination
+  .pagination {
+    padding-top: 70px;
+    ul {
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          display: inline-block;
+          padding: 13px 19px;
+          text-align: center;
+          border: 1px solid $six_color;
+          font-size: $large_size;
+          transition: 0.3s all ease-in-out;
+          &:hover {
+            background-color: $two_color;
+            color: $base_color;
+          }
+        }
+        &:first-child {
+          a {
+            padding: 13px 17px;
+          }
+        }
+        &:last-child {
+          a {
+            padding: 13px 17px;
+          }
+        }
+      }
+    }
+
+    //Notebook
+    @include notebook {
+      padding-top: 80px;
+      text-align: center;
+    }
+    //X_Tablet
+    @include x_tablet {
+      ul {
+        li {
+          a {
+            padding: 10px 15px;
+            font-size: $regular_size;
+          }
+          &:first-child {
+            a {
+              padding: 10px 15px;
+              font-size: $regular_size;
+            }
+          }
+          &:last-child {
+            a {
+              padding: 10px 15px;
+              font-size: $regular_size;
+            }
+          }
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      ul {
+        li {
+          margin-right: 7px;
+          margin-bottom: 7px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          a {
+            padding: 10px 15px;
+            font-size: $small_size;
+          }
+          &:first-child {
+            a {
+              padding: 10px 15px;
+              font-size: $small_size;
+            }
+          }
+          &:last-child {
+            a {
+              padding: 10px 15px;
+              font-size: $small_size;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /////BLOG-SİNGLE
 
 /////CONTACT

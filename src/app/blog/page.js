@@ -127,9 +127,17 @@ function Blog({ slug }) {
             <ul>
               <li>
                 <Link href="/">Previous</Link>
+              </li>
+              <li>
                 <Link href="/">1</Link>
+              </li>
+              <li>
                 <Link href="/">2</Link>
+              </li>
+              <li>
                 <Link href="/">3</Link>
+              </li>
+              <li>
                 <Link href="/">Next</Link>
               </li>
             </ul>
