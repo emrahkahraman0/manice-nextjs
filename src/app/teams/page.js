@@ -21,6 +21,50 @@ function Teams({ slug }) {
               </Link>
             </div>
             {/*teams_item*/}
+            <div class="teams_item">
+              <Image className="img_fluid" src={TeamImg} alt="Team Image" />
+              <h5>
+                <Link href={`/teams/${slug}`}>Team Name</Link>
+              </h5>
+              <h6>Team Job</h6>
+              <Link className="read_more" href={`/teams/${slug}`}>
+                Read More
+              </Link>
+            </div>
+            {/*teams_item*/}
+            <div class="teams_item">
+              <Image className="img_fluid" src={TeamImg} alt="Team Image" />
+              <h5>
+                <Link href={`/teams/${slug}`}>Team Name</Link>
+              </h5>
+              <h6>Team Job</h6>
+              <Link className="read_more" href={`/teams/${slug}`}>
+                Read More
+              </Link>
+            </div>
+            {/*teams_item*/}
+            <div class="teams_item">
+              <Image className="img_fluid" src={TeamImg} alt="Team Image" />
+              <h5>
+                <Link href={`/teams/${slug}`}>Team Name</Link>
+              </h5>
+              <h6>Team Job</h6>
+              <Link className="read_more" href={`/teams/${slug}`}>
+                Read More
+              </Link>
+            </div>
+            {/*teams_item*/}
+            <div class="teams_item">
+              <Image className="img_fluid" src={TeamImg} alt="Team Image" />
+              <h5>
+                <Link href={`/teams/${slug}`}>Team Name</Link>
+              </h5>
+              <h6>Team Job</h6>
+              <Link className="read_more" href={`/teams/${slug}`}>
+                Read More
+              </Link>
+            </div>
+            {/*teams_item*/}
           </div>
           {/*teams*/}
         </div>

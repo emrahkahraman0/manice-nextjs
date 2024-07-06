@@ -1,9 +1,8 @@
 'use client'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination } from 'swiper/modules'
+import { Autoplay } from 'swiper/modules'
 // Import Swiper styles
 import 'swiper/css'
-import 'swiper/css/pagination'
 import 'swiper/css/autoplay'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -23,10 +22,9 @@ function RecentProjects({ slug }) {
             {/*recent_projects_heading*/}
             <Swiper
               className="recent_projects_items"
-              modules={[Autoplay, Pagination]}
+              modules={[Autoplay]}
               spaceBetween={30}
               slidesPerView={3}
-              pagination={{ clickable: true }}
               loop={true}
               autoplay={{
                 delay: 2500,

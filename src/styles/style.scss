@@ -5569,7 +5569,6 @@ body {
     //&_item
     &_item {
       margin-bottom: 50px;
-
       &:last-child {
         margin-bottom: 0;
       }
@@ -5894,6 +5893,8 @@ body {
   width: 100%;
   background-color: $five_color;
   padding: 100px 0;
+  position: relative;
+  z-index: 1;
 
   //recent_projects
   .recent_projects {
@@ -6018,26 +6019,6 @@ body {
           .read_more {
             font-size: $small_size;
           }
-        }
-      }
-    }
-
-    //swiper
-    .swiper {
-      position: relative;
-      //swiper-pagination
-      .swiper-pagination {
-        .swiper-pagination-bullets {
-          position: absolute;
-          bottom: 10px;
-          left: 0;
-        }
-        //swiper-pagination-bullet
-        .swiper-pagination-bullet {
-          width: 10px;
-          height: 10px;
-          background-color: $two_color;
-          border-radius: 50%;
         }
       }
     }
@@ -6296,6 +6277,68 @@ body {
 /////BLOG-SİNGLE
 
 /////CONTACT
+
+//Contact#
+#contact {
+  width: 100%;
+  padding: 100px 0;
+
+  //contact
+  .contact {
+    //&_info
+    &_info {
+      //&_image
+      &_image {
+        img {
+          width: 100%;
+        }
+        //icons
+        .icons {
+          padding-top: 50px;
+          //&_item
+          &_item {
+            i {
+              color: $two_color;
+              font-size: 60px;
+            }
+            h5 {
+              padding: 25px 0;
+              font-family: $one_family;
+              color: $primary_color;
+              @include weight(black);
+              font-size: 21px;
+              text-transform: capitalize;
+              line-height: normal;
+            }
+            p {
+              font-family: $three_family;
+              color: $three_color;
+              font-size: $large_size;
+              line-height: 20px;
+              letter-spacing: 0.3px;
+            }
+          }
+        }
+      }
+      //&_form
+      &_form {
+        h6 {
+          font-family: $one_family;
+          @include weight(black);
+          font-size: 35px;
+          color: $primary_color;
+          text-transform: capitalize;
+        }
+        form {
+          padding-top: 40px;
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
 
 /////ERROR-404
 

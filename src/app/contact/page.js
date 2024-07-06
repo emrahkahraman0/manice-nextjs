@@ -29,7 +29,11 @@ function Contact() {
                   <div className="icons_item">
                     <i className="fa-regular fa-map"></i>
                     <h5>Address</h5>
-                    <p>99 S.t Jomblo Park Pekanbaru 28292. Indonesia</p>
+                    <p>
+                      99 S.t Jomblo Park <br /> Pekanbaru 28292. <br />{' '}
+                      Indonesia
+                    </p>
+                    <br />
                     <p>
                       Mon - Fri: 8AM — 4PM
                       <br />
@@ -45,6 +49,7 @@ function Contact() {
                       <br />
                       Fax: +44-333 014 4502
                     </p>
+                    <br />
                     <p>Email: contact@manice.com</p>
                   </div>
                   {/*icons_item*/}
