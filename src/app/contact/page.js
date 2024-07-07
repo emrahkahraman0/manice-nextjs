@@ -25,7 +25,7 @@ function Contact() {
                   src={ContactImage}
                   alt="Contact Image"
                 />
-                <div className="icons align_items row row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-sm-1">
+                <div className="icons align_items row row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-sm-2">
                   <div className="icons_item">
                     <i className="fa-regular fa-map"></i>
                     <h5>Address</h5>
@@ -62,7 +62,7 @@ function Contact() {
                 <form>
                   <input type="text" placeholder="Your Name" />
                   <input type="email" placeholder="Your Email" />
-                  <textarea placeholder="Your Message"></textarea>
+                  <textarea rows={8} placeholder="Your Message"></textarea>
                   <button type="submit">Send</button>
                   <p>
                     We provide a professional service for private and commercial

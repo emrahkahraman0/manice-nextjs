@@ -269,7 +269,7 @@ body {
         //open
         &_open {
           position: absolute;
-          top: 6%;
+          top: 7%;
           left: 70%;
           transform: translate(-50%, -50%);
         }
@@ -279,8 +279,8 @@ body {
         //open
         &_open {
           position: absolute;
-          top: 6%;
-          left: 60%;
+          top: 6.5%;
+          left: 65%;
           transform: translate(-50%, -50%);
         }
       }
@@ -289,8 +289,8 @@ body {
         //open
         &_open {
           position: absolute;
-          top: 6%;
-          left: 75%;
+          top: 6.5%;
+          left: 70%;
           transform: translate(-50%, -50%);
         }
       }
@@ -430,6 +430,19 @@ body {
           position: absolute;
           top: 50%;
           left: 65%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    //Mobil
+    @include mobil {
+      //&_search
+      &_search {
+        &_open {
+          position: absolute;
+          top: 55%;
+          left: 70%;
           transform: translate(-50%, -50%);
         }
       }
@@ -6276,12 +6289,25 @@ body {
 
 /////BLOG-SİNGLE
 
+//Blog_Details#
+#blog_details {
+  width: 100%;
+  padding: 50px 0;
+
+  //blog_details
+  .blog_details {
+    //blog_desc
+    .blog_desc {
+    }
+  }
+}
+
 /////CONTACT
 
 //Contact#
 #contact {
   width: 100%;
-  padding: 100px 0;
+  padding: 50px 0;
 
   //contact
   .contact {
@@ -6294,7 +6320,8 @@ body {
         }
         //icons
         .icons {
-          padding-top: 50px;
+          padding: 50px;
+          background-color: $five_color;
           //&_item
           &_item {
             i {
@@ -6319,6 +6346,86 @@ body {
             }
           }
         }
+
+        //Large
+        @include large {
+          //icons
+          .icons {
+            padding: 40px;
+            //&_item
+            &_item {
+              i {
+                font-size: 50px;
+              }
+              h5 {
+                font-size: $xlarge_size;
+              }
+            }
+          }
+        }
+        //Notebook
+        @include notebook {
+          //icons
+          .icons {
+            padding: 30px;
+            //&_item
+            &_item {
+              i {
+                font-size: 40px;
+              }
+              h5 {
+                padding: 20px 0;
+                font-size: $large_size;
+              }
+              p {
+                font-size: $regular_size;
+                line-height: 19px;
+              }
+            }
+          }
+        }
+        //X_Tablet
+        @include x_tablet {
+          text-align: center;
+          //icons
+          .icons {
+            padding: 25px;
+            //&_item
+            &_item {
+              margin-bottom: 30px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              i {
+                font-size: 35px;
+              }
+              h5 {
+                padding: 15px 0;
+              }
+            }
+          }
+        }
+        //Mobil
+        @include mobil {
+          //icons
+          .icons {
+            padding: 20px;
+            //&_item
+            &_item {
+              i {
+                font-size: 30px;
+              }
+              h5 {
+                padding: 15px 0;
+                font-size: $regular_size;
+              }
+              p {
+                font-size: $small_size;
+                line-height: normal;
+              }
+            }
+          }
+        }
       }
       //&_form
       &_form {
@@ -6327,12 +6434,114 @@ body {
           @include weight(black);
           font-size: 35px;
           color: $primary_color;
+          line-height: normal;
           text-transform: capitalize;
         }
         form {
           padding-top: 40px;
-          input {
+          input,
+          textarea {
             width: 100%;
+            background-color: transparent;
+            border: 1px solid $seven_color;
+            padding: 20px 25px;
+            font-family: $three_family;
+            font-size: $large_size;
+            @include weight(regular);
+            color: $four_color;
+            margin-bottom: 25px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          button {
+            background-color: $two_color;
+            padding: 15px 30px;
+            font-size: $xlarge_size;
+            font-family: $two_family;
+            color: $base_color;
+            @include weight(regular);
+            font-size: $xlarge_size;
+            text-transform: capitalize;
+            cursor: pointer;
+          }
+          p {
+            padding-top: 30px;
+            font-family: $three_family;
+            color: $three_color;
+            font-size: $large_size;
+            font-style: italic;
+            line-height: normal;
+          }
+        }
+
+        //Large
+        @include large {
+          h6 {
+            font-size: 30px;
+          }
+        }
+        //Notebook
+        @include notebook {
+          margin-top: 50px;
+          h6 {
+            font-size: 25px;
+          }
+          form {
+            input,
+            textarea {
+              padding: 15px 20px;
+            }
+          }
+        }
+        //Tablet
+        @include tablet {
+          h6 {
+            font-size: 20px;
+          }
+          form {
+            input,
+            textarea {
+              font-size: $regular_size;
+            }
+            button {
+              padding: 10px 25px;
+              font-size: $large_size;
+            }
+          }
+        }
+        //X_Tablet
+        @include x_tablet {
+          text-align: center;
+          h6 {
+            font-size: $xlarge_size;
+          }
+          form {
+            input,
+            textarea {
+              margin-bottom: 20px;
+            }
+            button {
+              padding: 10px 20px;
+              font-size: $regular_size;
+            }
+            p {
+              font-size: $regular_size;
+            }
+          }
+        }
+        //Mobil
+        @include mobil {
+          h6 {
+            font-size: $large_size;
+          }
+          form {
+            button {
+              font-size: $small_size;
+            }
+            p {
+              font-size: $small_size;
+            }
           }
         }
       }
