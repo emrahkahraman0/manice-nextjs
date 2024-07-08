@@ -1,9 +1,15 @@
+'use client'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function PricingsTwo() {
   return (
     <>
-      <div id="pricings_two">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="pricings_two"
+      >
         <div className="container">
           <h3>3 Coloumn</h3>
           <div className="pricings_two row row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-2">
@@ -81,7 +87,7 @@ function PricingsTwo() {
           {/*pricings_two*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*pricings_two#*/}
     </>
   )

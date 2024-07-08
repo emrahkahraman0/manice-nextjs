@@ -1,11 +1,17 @@
-import Image from "next/image";
-import TeamImg from "/public/370x370.png";
-import Link from "next/link";
+'use client'
+import Image from 'next/image'
+import TeamImg from '/public/370x370.png'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function AboutTeams() {
   return (
     <>
-      <div id="about_teams">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="about_teams"
+      >
         <div className="container">
           <div className="about_teams">
             <div className="about_teams_heading">
@@ -51,10 +57,10 @@ function AboutTeams() {
           {/*about_teams*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*about_teams#*/}
     </>
-  );
+  )
 }
 
-export default AboutTeams;
+export default AboutTeams

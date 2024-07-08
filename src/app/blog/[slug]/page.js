@@ -1,12 +1,18 @@
+'use client'
 import Page from '@/templates/Page'
 import Image from 'next/image'
 import BlogImg from '/public/1170x640.png'
+import { motion } from 'framer-motion'
 
 function BlogDetails() {
   return (
     <>
       <Page />
-      <div id="blog_details">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="blog_details"
+      >
         <div className="container">
           <div className="blog_details">
             <h6>Reprehenderit in voluptate velit esse cillum</h6>
@@ -92,7 +98,7 @@ function BlogDetails() {
           {/*blog_details*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*blog_details#*/}
     </>
   )

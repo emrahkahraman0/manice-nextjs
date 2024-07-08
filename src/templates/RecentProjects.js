@@ -7,11 +7,16 @@ import 'swiper/css/autoplay'
 import Link from 'next/link'
 import Image from 'next/image'
 import ProjectImg from '/public/300x300.png'
+import { motion } from 'framer-motion'
 
 function RecentProjects({ slug }) {
   return (
     <>
-      <div id="recent_projects">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="recent_projects"
+      >
         <div className="container">
           <div className="recent_projects">
             <div className="recent_projects_heading">
@@ -133,7 +138,7 @@ function RecentProjects({ slug }) {
           {/*recent_projects*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*recent_projects#*/}
     </>
   )

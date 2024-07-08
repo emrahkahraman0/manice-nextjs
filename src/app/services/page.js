@@ -1,11 +1,17 @@
+'use client'
 import Page from '@/templates/Page'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function Services({ slug }) {
   return (
     <>
       <Page />
-      <div id="services">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="services"
+      >
         <div className="container">
           <div className="services row row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-2">
             <div className="services_item">
@@ -102,7 +108,7 @@ function Services({ slug }) {
           {/*services*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*services#*/}
     </>
   )

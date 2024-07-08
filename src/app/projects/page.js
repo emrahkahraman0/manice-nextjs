@@ -1,13 +1,19 @@
+'use client'
 import Page from '@/templates/Page'
 import Image from 'next/image'
 import ProjectImg from '/public/300x300.png'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function Projects({ slug }) {
   return (
     <>
       <Page />
-      <div id="projects">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="projects"
+      >
         <div class="container">
           <div class="projects row row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-sm-2">
             <div class="projects_item">
@@ -104,7 +110,7 @@ function Projects({ slug }) {
           {/*projects*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*projects#*/}
     </>
   )

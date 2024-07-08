@@ -1,10 +1,15 @@
-"use client";
-import CountUp from "react-countup";
+'use client'
+import CountUp from 'react-countup'
+import { motion } from 'framer-motion'
 
 function HomeCounters() {
   return (
     <>
-      <div id="home_counters">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="home_counters"
+      >
         <div className="container">
           <div className="home_counters">
             <div className="home_counters_heading">
@@ -44,10 +49,10 @@ function HomeCounters() {
           {/*home_counters*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*home_counters#*/}
     </>
-  );
+  )
 }
 
-export default HomeCounters;
+export default HomeCounters

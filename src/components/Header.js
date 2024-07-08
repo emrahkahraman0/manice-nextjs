@@ -5,6 +5,7 @@ import Image from 'next/image'
 import HeaderLogo from '/public/headerLogo.svg'
 import Link from 'next/link'
 import SearchBar from '@/templates/SearchBar'
+import { motion } from 'framer-motion'
 
 function Header() {
   // Menü
@@ -39,7 +40,12 @@ function Header() {
 
   return (
     <>
-      <div id="header" className={scroll ? 'scroll' : ''}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="header"
+        className={scroll ? 'scroll' : ''}
+      >
         <div className="container">
           <div className="header">
             <div className="header_logo">
@@ -164,7 +170,7 @@ function Header() {
           {/* header */}
         </div>
         {/* container */}
-      </div>
+      </motion.div>
       {/* header# */}
     </>
   )

@@ -6,11 +6,16 @@ import 'swiper/css'
 import 'swiper/css/autoplay'
 import Image from 'next/image'
 import ClientImage from '/public/100x100.png'
+import { motion } from 'framer-motion'
 
 function ServicesClients() {
   return (
     <>
-      <div id="services_clients">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="services_clients"
+      >
         <div className="container">
           <div className="services_clients">
             <div className="services_clients_heading">
@@ -114,7 +119,7 @@ function ServicesClients() {
           {/*services_clients*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*services_clients#*/}
     </>
   )

@@ -1,10 +1,16 @@
+'use client'
 import Image from 'next/image'
 import Graphic from '/public/graphic.png'
+import { motion } from 'framer-motion'
 
 function Servicesİnfo() {
   return (
     <>
-      <div id="services_info">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="services_info"
+      >
         <div className="container">
           <div className="services_info align_items row row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-sm-1">
             <div className="services_info_image">
@@ -42,7 +48,7 @@ function Servicesİnfo() {
           {/*services_info*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*services_info#*/}
     </>
   )

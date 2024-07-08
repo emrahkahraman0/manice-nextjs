@@ -1,9 +1,15 @@
-import Link from "next/link";
+'use client'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function AboutValue() {
   return (
     <>
-      <div id="about_value">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="about_value"
+      >
         <div className="about_value">
           <div className="about_value_left">
             <div className="content container">
@@ -79,10 +85,10 @@ function AboutValue() {
           {/*about_value_right*/}
         </div>
         {/*about_value*/}
-      </div>
+      </motion.div>
       {/*about_value#*/}
     </>
-  );
+  )
 }
 
-export default AboutValue;
+export default AboutValue

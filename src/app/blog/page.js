@@ -1,13 +1,15 @@
+'use client'
 import Page from '@/templates/Page'
 import Link from 'next/link'
 import Image from 'next/image'
 import BlogImg from '/public/370x250.png'
+import { motion } from 'framer-motion'
 
 function Blog({ slug }) {
   return (
     <>
       <Page />
-      <div id="blog">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} id="blog">
         <div className="container">
           <div className="blog row row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-2">
             <div className="blog_item ">
@@ -145,7 +147,7 @@ function Blog({ slug }) {
           {/*pagination*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*blog#*/}
     </>
   )

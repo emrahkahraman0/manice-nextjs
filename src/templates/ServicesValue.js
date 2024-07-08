@@ -1,10 +1,16 @@
+'use client'
 import Image from 'next/image'
 import RightImg from '/public/945x640.png'
+import { motion } from 'framer-motion'
 
 function ServicesValue() {
   return (
     <>
-      <div id="services_value">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="services_value"
+      >
         <div className="services_value">
           <div className="services_value_left">
             <div className="content container">
@@ -45,7 +51,7 @@ function ServicesValue() {
           {/*services_value_right*/}
         </div>
         {/*services_value*/}
-      </div>
+      </motion.div>
       {/*services_value#*/}
     </>
   )

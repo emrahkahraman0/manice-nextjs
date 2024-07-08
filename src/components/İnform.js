@@ -1,10 +1,12 @@
-import Link from "next/link";
-import React from "react";
+'use client'
+import Link from 'next/link'
+import React from 'react'
+import { motion } from 'framer-motion'
 
 function İnform() {
   return (
     <>
-      <div id="inform">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} id="inform">
         <div className="container">
           <div className="inform">
             <div className="inform_text">
@@ -25,10 +27,10 @@ function İnform() {
           {/*inform_text*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*inform#*/}
     </>
-  );
+  )
 }
 
-export default İnform;
+export default İnform

@@ -1,10 +1,16 @@
-import Link from "next/link";
-import React from "react";
+'use client'
+import Link from 'next/link'
+import React from 'react'
+import { motion } from 'framer-motion'
 
 function AboutServices() {
   return (
     <>
-      <div id="about_services">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="about_services"
+      >
         <div className="container">
           <div className="about_services">
             <div className="about_services_heading">
@@ -85,10 +91,10 @@ function AboutServices() {
           {/*about_services*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*about_services#*/}
     </>
-  );
+  )
 }
 
-export default AboutServices;
+export default AboutServices

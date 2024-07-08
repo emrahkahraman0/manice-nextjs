@@ -1,11 +1,17 @@
-import Image from "next/image";
-import BlogImg from "/public/370x250.png";
-import Link from "next/link";
+'use client'
+import Image from 'next/image'
+import BlogImg from '/public/370x250.png'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function HomeBlog() {
   return (
     <>
-      <div id="home_blog">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="home_blog"
+      >
         <div className="container">
           <div className="home_blog">
             <div className="home_blog_heading">
@@ -84,10 +90,10 @@ function HomeBlog() {
           {/*home_blog*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*home_blog#*/}
     </>
-  );
+  )
 }
 
-export default HomeBlog;
+export default HomeBlog

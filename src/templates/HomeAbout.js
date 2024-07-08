@@ -1,11 +1,17 @@
-import Image from "next/image";
-import RightImg from "/public/945x640.png";
-import Link from "next/link";
+'use client'
+import Image from 'next/image'
+import RightImg from '/public/945x640.png'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function HomeAbout() {
   return (
     <>
-      <div id="home_about">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="home_about"
+      >
         <div className="home_about">
           <div className="home_about_left">
             <div className="content container">
@@ -49,10 +55,10 @@ function HomeAbout() {
           {/*home_about_right*/}
         </div>
         {/*home_about*/}
-      </div>
+      </motion.div>
       {/*home_about#*/}
     </>
-  );
+  )
 }
 
-export default HomeAbout;
+export default HomeAbout

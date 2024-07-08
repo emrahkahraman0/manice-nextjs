@@ -1,18 +1,20 @@
-import Image from "next/image";
-import FooterLogo from "/public/footerLogo.svg";
-import Link from "next/link";
+'use client'
+import Image from 'next/image'
+import FooterLogo from '/public/footerLogo.svg'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function Footer() {
   return (
     <>
-      <div id="footer">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} id="footer">
         <div className="container">
           <div className="footer row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2">
             <div className="footer_item">
               <Image className="img_fluid" src={FooterLogo} alt="Footer Logo" />
               <p>
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.{" "}
+                cillum dolore eu fugiat nulla pariatur.{' '}
               </p>
               <ul className="social">
                 <li>
@@ -132,16 +134,20 @@ function Footer() {
           {/*footer*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*footer#*/}
 
-      <div id="copyright">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="copyright"
+      >
         <div className="container text">
           © 2020 Manice Figma Template. All rights reserved
         </div>
-      </div>
+      </motion.div>
     </>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

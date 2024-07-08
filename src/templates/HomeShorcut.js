@@ -1,10 +1,16 @@
-import Link from "next/link";
-import VideoModal from "./VideoModal";
+'use client'
+import Link from 'next/link'
+import VideoModal from './VideoModal'
+import { motion } from 'framer-motion'
 
 function HomeShorcut() {
   return (
     <>
-      <div id="home_shortcut">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="home_shortcut"
+      >
         <div className="container">
           <div className="home_shortcut">
             <div className="home_shortcut_text">
@@ -30,10 +36,10 @@ function HomeShorcut() {
           {/*home_shortcut*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*home_shortcut#*/}
     </>
-  );
+  )
 }
 
-export default HomeShorcut;
+export default HomeShorcut

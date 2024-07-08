@@ -1,13 +1,19 @@
-import Page from "@/templates/Page";
-import RecentProjects from "@/templates/RecentProjects";
-import Image from "next/image";
-import ProjectImg from "/public/300x300.png";
+'use client'
+import Page from '@/templates/Page'
+import RecentProjects from '@/templates/RecentProjects'
+import Image from 'next/image'
+import ProjectImg from '/public/300x300.png'
+import { motion } from 'framer-motion'
 
 function ProjectsDetails() {
   return (
     <>
       <Page />
-      <div id="projects_details">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="projects_details"
+      >
         <div class="container">
           <div class="projects_details align_items row row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-sm-1">
             <div class="projects_details_image">
@@ -28,11 +34,11 @@ function ProjectsDetails() {
           {/*projects_details*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*projects_details#*/}
       <RecentProjects />
     </>
-  );
+  )
 }
 
-export default ProjectsDetails;
+export default ProjectsDetails

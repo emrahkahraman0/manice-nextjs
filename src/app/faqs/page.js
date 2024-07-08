@@ -1,29 +1,31 @@
-import Accordion from "@/templates/Accordion";
-import Page from "@/templates/Page";
+'use client'
+import Accordion from '@/templates/Accordion'
+import Page from '@/templates/Page'
+import { motion } from 'framer-motion'
 
 const faqs = [
   {
-    question: "Question 1",
+    question: 'Question 1',
     answer:
-      "1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas,velit, ipsa cum, eligendi quasi suscipit deserunt facere voluptates sapiente illum perferendis ipsam consequuntur ut modi provident inearum saepe.",
+      '1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas,velit, ipsa cum, eligendi quasi suscipit deserunt facere voluptates sapiente illum perferendis ipsam consequuntur ut modi provident inearum saepe.'
   },
   {
-    question: "Question 2",
+    question: 'Question 2',
     answer:
-      "2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas,velit, ipsa cum, eligendi quasi suscipit deserunt facere voluptates sapiente illum perferendis ipsam consequuntur ut modi provident inearum saepe.",
+      '2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas,velit, ipsa cum, eligendi quasi suscipit deserunt facere voluptates sapiente illum perferendis ipsam consequuntur ut modi provident inearum saepe.'
   },
   {
-    question: "Question 3",
+    question: 'Question 3',
     answer:
-      "3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas,velit, ipsa cum, eligendi quasi suscipit deserunt facere voluptates sapiente illum perferendis ipsam consequuntur ut modi provident inearum saepe.",
-  },
-];
+      '3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas,velit, ipsa cum, eligendi quasi suscipit deserunt facere voluptates sapiente illum perferendis ipsam consequuntur ut modi provident inearum saepe.'
+  }
+]
 
 function Faqs() {
   return (
     <>
       <Page />
-      <div id="faqs">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} id="faqs">
         <div class="container">
           <div class="faqs">
             <div class="faqs_item">
@@ -52,10 +54,10 @@ function Faqs() {
           {/*faqs*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*faqs#*/}
     </>
-  );
+  )
 }
 
-export default Faqs;
+export default Faqs

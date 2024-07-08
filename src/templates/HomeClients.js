@@ -1,16 +1,21 @@
-"use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+'use client'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper/modules'
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/autoplay";
-import Image from "next/image";
-import Client1 from "/public/1200x535.png";
+import 'swiper/css'
+import 'swiper/css/autoplay'
+import Image from 'next/image'
+import Client1 from '/public/1200x535.png'
+import { motion } from 'framer-motion'
 
 function HomeClients() {
   return (
     <>
-      <div id="home_clients">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="home_clients"
+      >
         <div className="container">
           <Swiper
             className="home_clients"
@@ -21,7 +26,7 @@ function HomeClients() {
             autoplay={{
               delay: 2500,
               pauseOnMouseEnter: true,
-              disableOnInteraction: false,
+              disableOnInteraction: false
             }}
           >
             <SwiperSlide className="home_clients_item">
@@ -73,10 +78,10 @@ function HomeClients() {
           {/*home_clients*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*home_clients#*/}
     </>
-  );
+  )
 }
 
-export default HomeClients;
+export default HomeClients

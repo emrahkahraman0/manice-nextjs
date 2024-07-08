@@ -1,10 +1,16 @@
-import Image from "next/image";
-import InfoImage from "/public/570x415.png";
+'use client'
+import Image from 'next/image'
+import InfoImage from '/public/570x415.png'
+import { motion } from 'framer-motion'
 
 function Aboutİnfo() {
   return (
     <>
-      <div id="about_info">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="about_info"
+      >
         <div className="container">
           <div className="about_info align_items row row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-sm-1">
             <div className="about_info_image">
@@ -35,10 +41,10 @@ function Aboutİnfo() {
           {/*about_info*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*about_info#*/}
     </>
-  );
+  )
 }
 
-export default Aboutİnfo;
+export default Aboutİnfo

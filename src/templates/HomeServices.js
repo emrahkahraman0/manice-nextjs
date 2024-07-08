@@ -1,9 +1,15 @@
-import Link from "next/link";
+'use client'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function HomeServices() {
   return (
     <>
-      <div id="home_services">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="home_services"
+      >
         <div className="container">
           <div className="home_services">
             <div className="home_services_heading">
@@ -109,10 +115,10 @@ function HomeServices() {
           {/*home_services*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*home_services#*/}
     </>
-  );
+  )
 }
 
-export default HomeServices;
+export default HomeServices

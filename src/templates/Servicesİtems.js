@@ -1,9 +1,15 @@
+'use client'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function Servicesİtems() {
   return (
     <>
-      <div id="services_items">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="services_items"
+      >
         <div className="container">
           <div className="services_items">
             <div className="services_items_heading">
@@ -127,7 +133,7 @@ function Servicesİtems() {
           {/*services_items*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*services#*/}
     </>
   )

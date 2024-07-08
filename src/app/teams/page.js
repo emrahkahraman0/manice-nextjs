@@ -1,13 +1,15 @@
+'use client'
 import Page from '@/templates/Page'
 import Image from 'next/image'
 import TeamImg from '/public/250x250.png'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function Teams({ slug }) {
   return (
     <>
       <Page />
-      <div id="teams">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} id="teams">
         <div class="container">
           <div class="teams row row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-2">
             <div class="teams_item">
@@ -69,7 +71,7 @@ function Teams({ slug }) {
           {/*teams*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*teams#*/}
     </>
   )

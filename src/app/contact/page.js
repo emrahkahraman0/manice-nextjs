@@ -1,14 +1,20 @@
+'use client'
 import HomeBrands from '@/templates/HomeBrands'
 import Page from '@/templates/Page'
 import Link from 'next/link'
 import Image from 'next/image'
 import ContactImage from '/public/570x360.png'
+import { motion } from 'framer-motion'
 
 function Contact() {
   return (
     <>
       <Page />
-      <div id="contact">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="contact"
+      >
         <div className="container">
           <div className="contact">
             <iframe
@@ -77,7 +83,7 @@ function Contact() {
           {/*contact*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*contact#*/}
       <HomeBrands />
     </>

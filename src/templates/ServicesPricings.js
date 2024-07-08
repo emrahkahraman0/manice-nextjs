@@ -1,9 +1,15 @@
-import Link from "next/link";
+'use client'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function ServicesPricings() {
   return (
     <>
-      <div id="services_pricings">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        id="services_pricings"
+      >
         <div className="container">
           <div className="services_pricings">
             <div className="services_pricings_heading">
@@ -95,10 +101,10 @@ function ServicesPricings() {
           {/*services_pricings*/}
         </div>
         {/*container*/}
-      </div>
+      </motion.div>
       {/*services_pricings#*/}
     </>
-  );
+  )
 }
 
-export default ServicesPricings;
+export default ServicesPricings
