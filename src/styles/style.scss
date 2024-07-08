@@ -6292,12 +6292,299 @@ body {
 //Blog_Details#
 #blog_details {
   width: 100%;
-  padding: 50px 0;
+  padding: 100px 0;
 
   //blog_details
   .blog_details {
+    h6 {
+      padding-left: 150px;
+      font-family: $one_family;
+      color: $primary_color;
+      @include weight(black);
+      font-size: 35px;
+      line-height: normal;
+    }
+    img {
+      width: 100%;
+    }
     //blog_desc
     .blog_desc {
+      padding: 35px 150px 30px 150px;
+      display: flex;
+      align-items: center;
+      //&_item
+      &_item {
+        display: flex;
+        align-items: center;
+        margin-right: 25px;
+        &:last-child {
+          margin-right: 0;
+        }
+        i {
+          color: $two_color;
+          font-size: $regular_size;
+        }
+        span {
+          padding-left: 7px;
+          font-family: $three_family;
+          color: $three_color;
+          @include weight(regular);
+          font-size: $large_size;
+        }
+      }
+    }
+    //post_detail
+    .post_detail {
+      padding: 60px 150px 0 150px;
+      //desc
+      .desc {
+        display: flex;
+        align-items: center;
+        h5 {
+          font-family: $three_color;
+          color: $primary_color;
+          text-transform: uppercase;
+          @include weight(regular);
+          font-size: 95px;
+        }
+        p {
+          padding-left: 20px;
+          font-family: $three_family;
+          color: $three_color;
+          font-size: $large_size;
+          @include weight(regular);
+          line-height: 21px;
+          letter-spacing: 0.3px;
+        }
+      }
+      p {
+        padding-top: 30px;
+        font-family: $three_family;
+        color: $three_color;
+        font-size: $large_size;
+        line-height: 21px;
+      }
+      h4 {
+        padding-top: 40px;
+        font-family: $one_family;
+        color: $primary_color;
+        line-height: normal;
+        @include weight(black);
+        font-size: 24px;
+      }
+      ul {
+        padding-top: 25px;
+        li {
+          list-style-type: decimal;
+          line-height: normal;
+          padding-bottom: 10px;
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+      ol {
+        padding-top: 25px;
+        padding-bottom: 20px;
+        li {
+          list-style-type: disc;
+          padding-bottom: 10px;
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+
+    //Large
+    @include large {
+      h6 {
+        font-size: 30px;
+        padding-left: 100px;
+      }
+    }
+
+    //Notebook
+    @include notebook {
+      h6 {
+        font-size: 25px;
+        padding-left: 0;
+      }
+      //blog_desc
+      .blog_desc {
+        padding: 30px 0 30px 0;
+      }
+      //post_detail
+      .post_detail {
+        padding: 50px 0px 0 0;
+        //desc
+        .desc {
+          h5 {
+            font-size: 50px;
+          }
+        }
+        h4 {
+          font-size: 21px;
+        }
+      }
+    }
+    //Tablet
+    @include tablet {
+      h6 {
+        font-size: 22px;
+      }
+      //blog_desc
+      .blog_desc {
+        padding: 25px 0 25px 0;
+        //&_item
+        &_item {
+          margin-right: 15px;
+          span {
+            padding-left: 5px;
+            font-size: $regular_size;
+          }
+        }
+      }
+      //post_detail
+      .post_detail {
+        padding: 20px 0px 0 0;
+        //desc
+        .desc {
+          h5 {
+            font-size: 50px;
+          }
+          p {
+            padding-left: 15px;
+            font-size: $regular_size;
+            line-height: 19px;
+          }
+        }
+        p {
+          padding-top: 20px;
+          font-size: $regular_size;
+          line-height: 19px;
+        }
+        h4 {
+          font-size: $xlarge_size;
+        }
+        ul,
+        ol {
+          padding-top: 20px;
+          padding-bottom: 15px;
+          li {
+            font-size: $regular_size;
+            padding-bottom: 7px;
+          }
+        }
+      }
+    }
+    //X_Tablet
+    @include x_tablet {
+      text-align: center;
+      h6 {
+        font-size: $xlarge_size;
+      }
+      //blog_desc
+      .blog_desc {
+        padding: 25px 0 25px 0;
+        justify-content: center;
+      }
+      //post_detail
+      .post_detail {
+        padding: 20px 0px 0 0;
+        //desc
+        .desc {
+          display: none;
+          h5 {
+            font-size: 50px;
+          }
+          p {
+            padding-left: 15px;
+            font-size: $regular_size;
+            line-height: 19px;
+          }
+        }
+        p {
+          padding-top: 20px;
+          font-size: $regular_size;
+          line-height: 19px;
+        }
+        h4 {
+          font-size: $large_size;
+        }
+        ul,
+        ol {
+          padding-top: 20px;
+          padding-bottom: 15px;
+          li {
+            font-size: $regular_size;
+            padding-bottom: 7px;
+          }
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      h6 {
+        font-size: $large_size;
+      }
+      //blog_desc
+      .blog_desc {
+        padding: 25px 0 25px 0;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        //&_item
+        &_item {
+          margin-bottom: 7px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          i {
+            font-size: $regular_size;
+          }
+          span {
+            font-size: $small_size;
+          }
+        }
+      }
+      //post_detail
+      .post_detail {
+        padding: 20px 0px 0 0;
+        //desc
+        .desc {
+          display: none;
+          h5 {
+            font-size: 50px;
+          }
+          p {
+            padding-left: 15px;
+            font-size: $regular_size;
+            line-height: 19px;
+          }
+        }
+        p {
+          padding-top: 20px;
+          font-size: $small_size;
+          line-height: 17px;
+        }
+        h4 {
+          text-align: left;
+          font-size: $regular_size;
+        }
+        ul,
+        ol {
+          text-align: left;
+          padding-left: 20px;
+          padding-top: 25px;
+          padding-bottom: 15px;
+          li {
+            font-size: $small_size;
+            line-height: 16px;
+            padding-bottom: 10px;
+          }
+        }
+      }
     }
   }
 }
