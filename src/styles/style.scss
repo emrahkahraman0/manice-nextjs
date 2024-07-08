@@ -269,7 +269,7 @@ body {
         //open
         &_open {
           position: absolute;
-          top: 7%;
+          top: 5.8%;
           left: 70%;
           transform: translate(-50%, -50%);
         }
@@ -279,7 +279,7 @@ body {
         //open
         &_open {
           position: absolute;
-          top: 6.5%;
+          top: 5.8%;
           left: 65%;
           transform: translate(-50%, -50%);
         }
@@ -289,7 +289,7 @@ body {
         //open
         &_open {
           position: absolute;
-          top: 6.5%;
+          top: 5.8%;
           left: 70%;
           transform: translate(-50%, -50%);
         }
@@ -533,6 +533,7 @@ body {
         .slider_caption {
           h6 {
             font-size: 60px;
+            letter-spacing: 0.6px;
           }
 
           p {
@@ -559,6 +560,7 @@ body {
           h6 {
             max-width: 100%;
             font-size: 40px;
+            letter-spacing: 0.5px;
           }
 
           p {
@@ -581,6 +583,7 @@ body {
         .slider_caption {
           h6 {
             font-size: 30px;
+            letter-spacing: 0.4px;
           }
 
           p {
@@ -606,6 +609,7 @@ body {
           h6 {
             font-size: 25px;
             line-height: 28px;
+            letter-spacing: 0.3px;
           }
 
           p {
@@ -631,6 +635,7 @@ body {
           h6 {
             font-size: 20px;
             line-height: 23px;
+            letter-spacing: 0.2px;
           }
 
           p {
