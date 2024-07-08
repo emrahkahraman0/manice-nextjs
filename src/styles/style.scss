@@ -269,7 +269,27 @@ body {
         //open
         &_open {
           position: absolute;
-          top: 5.8%;
+          top: 4%;
+          left: 70%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      //820
+      @media screen and (max-width: 820px) {
+        //open
+        &_open {
+          position: absolute;
+          top: 4.7%;
+          left: 70%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      //Tablet
+      @include tablet {
+        //open
+        &_open {
+          position: absolute;
+          top: 5.4%;
           left: 70%;
           transform: translate(-50%, -50%);
         }
@@ -281,6 +301,16 @@ body {
           position: absolute;
           top: 5.8%;
           left: 65%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      //540
+      @media screen and (max-width: 540px) {
+        //open
+        &_open {
+          position: absolute;
+          top: 7.2%;
+          left: 70%;
           transform: translate(-50%, -50%);
         }
       }
@@ -300,6 +330,16 @@ body {
         &_open {
           position: absolute;
           top: 7.8%;
+          left: 70%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      //344
+      @media screen and (max-width: 344px) {
+        //open
+        &_open {
+          position: absolute;
+          top: 6%;
           left: 70%;
           transform: translate(-50%, -50%);
         }

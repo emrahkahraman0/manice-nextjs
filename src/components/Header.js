@@ -1,63 +1,45 @@
-"use client";
-import { useState, useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
-import Image from "next/image";
-import HeaderLogo from "/public/headerLogo.svg";
-import Link from "next/link";
-import SearchBar from "@/templates/SearchBar";
+'use client'
+import { useState, useEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
+import Image from 'next/image'
+import HeaderLogo from '/public/headerLogo.svg'
+import Link from 'next/link'
+import SearchBar from '@/templates/SearchBar'
 
 function Header() {
   // Menü
-  const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false)
+  const menuRef = useRef(null)
 
   function toggleMenu() {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen)
   }
 
   function closeMenu() {
-    setIsOpen(false);
+    setIsOpen(false)
   }
 
   // Scroll
-  const [scroll, setScroll] = useState(false);
+  const [scroll, setScroll] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.pageYOffset > 0) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
-    };
+      setScroll(window.pageYOffset > 0)
+    }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // Menü dışına tıklanıldığında menüyü kapat
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        closeMenu();
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   // Active
-  const currentRoute = usePathname();
+  const currentRoute = usePathname()
 
   return (
     <>
-      <div id="header" className={scroll ? "scroll" : ""}>
+      <div id="header" className={scroll ? 'scroll' : ''}>
         <div className="container">
           <div className="header">
             <div className="header_logo">
@@ -71,45 +53,57 @@ function Header() {
             </div>
             {/* header_logo */}
 
-            <ul ref={menuRef} className={`header_menu ${isOpen ? "open" : ""}`}>
-              <li onClick={closeMenu}>
-                <Link className={currentRoute === "/" ? "active" : ""} href="/">
+            <ul ref={menuRef} className={`header_menu ${isOpen ? 'open' : ''}`}>
+              <li>
+                <Link
+                  className={currentRoute === '/' ? 'active' : ''}
+                  href="/"
+                  onClick={closeMenu}
+                >
                   Home
                 </Link>
               </li>
-              <li onClick={closeMenu}>
+              <li>
                 <Link
-                  className={currentRoute === "/about" ? "active" : ""}
+                  className={currentRoute === '/about' ? 'active' : ''}
                   href="/about"
+                  onClick={closeMenu}
                 >
                   About
                 </Link>
               </li>
               <li>
-                <Link className={currentRoute === "#" ? "active" : ""} href="#">
+                <Link
+                  className={currentRoute === '#' ? 'active' : ''}
+                  href="#"
+                  onClick={closeMenu}
+                >
                   Pages
                 </Link>
                 <ul className="dropdown">
-                  <li onClick={closeMenu}>
+                  <li>
                     <Link
-                      className={currentRoute === "/teams" ? "active" : ""}
+                      className={currentRoute === '/teams' ? 'active' : ''}
                       href="/teams"
+                      onClick={closeMenu}
                     >
                       Teams
                     </Link>
                   </li>
-                  <li onClick={closeMenu}>
+                  <li>
                     <Link
-                      className={currentRoute === "/faqs" ? "active" : ""}
+                      className={currentRoute === '/faqs' ? 'active' : ''}
                       href="/faqs"
+                      onClick={closeMenu}
                     >
                       Faqs
                     </Link>
                   </li>
-                  <li onClick={closeMenu}>
+                  <li>
                     <Link
-                      className={currentRoute === "/pricings" ? "active" : ""}
+                      className={currentRoute === '/pricings' ? 'active' : ''}
                       href="/pricings"
+                      onClick={closeMenu}
                     >
                       Pricings
                     </Link>
@@ -117,34 +111,38 @@ function Header() {
                 </ul>
                 {/* dropdown */}
               </li>
-              <li onClick={closeMenu}>
+              <li>
                 <Link
-                  className={currentRoute === "/services" ? "active" : ""}
+                  className={currentRoute === '/services' ? 'active' : ''}
                   href="/services"
+                  onClick={closeMenu}
                 >
                   Services
                 </Link>
               </li>
-              <li onClick={closeMenu}>
+              <li>
                 <Link
-                  className={currentRoute === "/projects" ? "active" : ""}
+                  className={currentRoute === '/projects' ? 'active' : ''}
                   href="/projects"
+                  onClick={closeMenu}
                 >
                   Projects
                 </Link>
               </li>
-              <li onClick={closeMenu}>
+              <li>
                 <Link
-                  className={currentRoute === "/blog" ? "active" : ""}
+                  className={currentRoute === '/blog' ? 'active' : ''}
                   href="/blog"
+                  onClick={closeMenu}
                 >
                   Blog
                 </Link>
               </li>
-              <li onClick={closeMenu}>
+              <li>
                 <Link
-                  className={currentRoute === "/contact" ? "active" : ""}
+                  className={currentRoute === '/contact' ? 'active' : ''}
                   href="/contact"
+                  onClick={closeMenu}
                 >
                   Contact
                 </Link>
@@ -155,7 +153,7 @@ function Header() {
             <SearchBar />
 
             <div
-              className={`header_hamburger ${isOpen ? "open" : ""}`}
+              className={`header_hamburger ${isOpen ? 'open' : ''}`}
               onClick={toggleMenu}
             >
               <i className="fa-solid fa-bars bars"></i>
@@ -169,7 +167,7 @@ function Header() {
       </div>
       {/* header# */}
     </>
-  );
+  )
 }
 
-export default Header;
+export default Header
